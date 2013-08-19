@@ -1,8 +1,367 @@
 <div class="container">
 	<div class="row">
 
-		<h1>STOW</h1>
-		<p>Content coming soon..</p>
+		<h1>Store</h1>
+
+		<p>
+			<u>ST</u>ore <u>O</u>ver the <u>W</u>eb (STOW) enables you to store specific instances to the server. 
+			STOW is currently part of the DICOM standard. The specification, as written, can be found
+			<a href="ftp://medical.nema.org/medical/dicom/supps/LB/sup163_lb.doc" target="_blank">here</a>.
+		</p>
+		<h3>Methods</h3>
+		<p>Following are a list of methods accepted by a STOW service. Click on a method for further detail.</p>
+
+		<!-- RETRIEVESTUDY -->
+		<div class="restget restoperation">
+			<div class="restheading">
+				<h3>
+					<span class="resthttp_method">get</span>
+					<span class="restpath">/studies/{StUID}</span>
+				</h3>
+				<ul class="restoptions">
+					<li>Retrieve an individual study</li>
+				</ul>
+			</div>
+			<div class="restcontent">
+				<h4>Parameters</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+							<th>Data Type</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">{StUID}</td>
+							<td>The study instance UID to retrieve instances from.</td>
+							<td>UID</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4>Headers</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Header</th>
+							<th>Description</th>
+							<th>Accepted Values</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">Accept</td>
+							<td>The representation scheme being posted to the RESTful service.</td>
+							<td>
+								multipart/related; type=application/dicom; [transfer-syntax={TransferSyntaxUID}]<br />
+								multipart/related; type=application/octet-stream<br />
+								multipart/related; type={MediaType}
+							</td>
+						</tr>
+					</tbody>
+				</table>				
+			</div>
+		</div>
+
+		<!-- RETRIEVESERIES -->
+		<div class="restget restoperation">
+			<div class="restheading">
+				<h3>
+					<span class="resthttp_method">get</span>
+					<span class="restpath">/studies/{StUID}/series/{SeUID}</span>
+				</h3>
+				<ul class="restoptions">
+					<li>Retrieve an individual series</li>
+				</ul>
+			</div>
+			<div class="restcontent">
+				<h4>Parameters</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+							<th>Data Type</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">{StUID}</td>
+							<td>The study instance UID to retrieve instances from.</td>
+							<td>UID</td>
+						</tr>
+						<tr>
+							<td class="code required">{SeUID}</td>
+							<td>The series instance UID to retrieve instances from.</td>
+							<td>UID</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4>Headers</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Header</th>
+							<th>Description</th>
+							<th>Accepted Values</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">Accept</td>
+							<td>The representation scheme being posted to the RESTful service.</td>
+							<td>
+								multipart/related; type=application/dicom; [transfer-syntax={TransferSyntaxUID}]<br />
+								multipart/related; type=application/octet-stream<br />
+								multipart/related; type={MediaType}
+							</td>
+						</tr>
+					</tbody>
+				</table>				
+			</div>
+		</div>
+
+		<!-- RETRIEVEINSTANCE -->
+		<div class="restget restoperation">
+			<div class="restheading">
+				<h3>
+					<span class="resthttp_method">get</span>
+					<span class="restpath">/studies/{StUID}/series/{SeUID}/instances/{InUID}</span>
+				</h3>
+				<ul class="restoptions">
+					<li>Retrieve an individual instance</li>
+				</ul>
+			</div>
+			<div class="restcontent">
+				<h4>Parameters</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+							<th>Data Type</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">{StUID}</td>
+							<td>The study instance UID to retrieve instances from.</td>
+							<td>UID</td>
+						</tr>
+						<tr>
+							<td class="code required">{SeUID}</td>
+							<td>The series instance UID to retrieve instances from.</td>
+							<td>UID</td>
+						</tr>
+						<tr>
+							<td class="code required">{InUID}</td>
+							<td>The SOP instance UID to retrieve.</td>
+							<td>UID</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4>Headers</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Header</th>
+							<th>Description</th>
+							<th>Accepted Values</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">Accept</td>
+							<td>The representation scheme being posted to the RESTful service.</td>
+							<td>
+								multipart/related; type=application/dicom; [transfer-syntax={TransferSyntaxUID}]<br />
+								multipart/related; type=application/octet-stream<br />
+								multipart/related; type={MediaType}
+							</td>
+						</tr>
+					</tbody>
+				</table>				
+			</div>
+		</div>
+
+		<!-- RETRIEVEFRAMES -->
+		<div class="restget restoperation">
+			<div class="restheading">
+				<h3>
+					<span class="resthttp_method">get</span>
+					<span class="restpath">/studies/{StUID}/series/{SeUID}/instances/{InUID}/frames/{FrameList}</span>
+				</h3>
+				<ul class="restoptions">
+					<li>Retrieve individual frames</li>
+				</ul>
+			</div>
+			<div class="restcontent">
+				<h4>Parameters</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+							<th>Data Type</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">{StUID}</td>
+							<td>The study instance UID to retrieve instances from.</td>
+							<td>UID</td>
+						</tr>
+						<tr>
+							<td class="code required">{SeUID}</td>
+							<td>The series instance UID to retrieve instances from.</td>
+							<td>UID</td>
+						</tr>
+						<tr>
+							<td class="code required">{InUID}</td>
+							<td>The SOP instance UID to retrieve.</td>
+							<td>UID</td>
+						</tr>
+						<tr>
+							<td class="code required">{FrameList}</td>
+							<td>Comma separated list of frame numbers</td>
+							<td>UID</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4>Headers</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Header</th>
+							<th>Description</th>
+							<th>Accepted Values</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">Accept</td>
+							<td>The representation scheme being posted to the RESTful service.</td>
+							<td>
+								multipart/related; type=application/dicom; [transfer-syntax={TransferSyntaxUID}]<br />
+								multipart/related; type=application/octet-stream<br />
+								multipart/related; type={MediaType}
+							</td>
+						</tr>
+					</tbody>
+				</table>				
+			</div>
+		</div>
+
+		<!-- RETRIEVEMETADATA -->
+		<div class="restget restoperation">
+			<div class="restheading">
+				<h3>
+					<span class="resthttp_method">get</span>
+					<span class="restpath">/studies/{StUID}/metadata</span>
+				</h3>
+				<ul class="restoptions">
+					<li>Retrieve study meta-data</li>
+				</ul>
+			</div>
+			<div class="restcontent">
+				<h4>Parameters</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+							<th>Data Type</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">{StUID}</td>
+							<td>The study instance UID to retrieve instances from.</td>
+							<td>UID</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4>Headers</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Header</th>
+							<th>Description</th>
+							<th>Accepted Values</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">Accept</td>
+							<td>The representation scheme being posted to the RESTful service.</td>
+							<td>
+								multipart/related; type=application/dicom+xml;<br />
+							</td>
+						</tr>
+					</tbody>
+				</table>				
+			</div>
+		</div>
+
+		<!-- RETRIEVEBULKDATA -->
+		<div class="restget restoperation">
+			<div class="restheading">
+				<h3>
+					<span class="resthttp_method">get</span>
+					<span class="restpath">{BulkDataURL}</span>
+				</h3>
+				<ul class="restoptions">
+					<li>Retrieve bulk data items</li>
+				</ul>
+			</div>
+			<div class="restcontent">
+				<h4>Parameters</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+							<th>Data Type</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">{BulkDataURL}</td>
+							<td>URL to retrieve bulk data from</td>
+							<td>URL</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4>Headers</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Header</th>
+							<th>Description</th>
+							<th>Accepted Values</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">Accept</td>
+							<td>The representation scheme being posted to the RESTful service.</td>
+							<td>
+								multipart/related; type=application/octet-stream<br />
+								multipart/related; type={MediaType}
+							</td>
+						</tr>
+					</tbody>
+				</table>				
+			</div>
+		</div>
+
 
 	</div>
 </div>

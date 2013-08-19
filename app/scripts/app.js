@@ -31,3 +31,12 @@ angular.module('dicomdocsApp', [])
         redirectTo: '/home'
       });
   });
+
+$("#contentcontainer").on("click", ".restheading", function(event) {
+  var bodyElement = $(this).next();
+  if (bodyElement.css("display") === "none") {
+    bodyElement.slideDown("fast");
+  } else {
+    bodyElement.slideUp("fast");
+  }
+});

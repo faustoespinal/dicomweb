@@ -38,6 +38,7 @@ body {
     padding: 0;
     background-color: #e7f0f7;
     border: 1px solid #c3d9ec;
+    cursor: pointer;
 }
 .restheading h3 {
     display: block;
@@ -110,6 +111,7 @@ border-bottom-left-radius: 6px;
 -khtml-border-bottom-right-radius: 6px;
 border-bottom-right-radius: 6px;
 margin: 0 0 20px;
+display: none;
 }
 
 .restcontent h4 {

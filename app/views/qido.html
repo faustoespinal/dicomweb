@@ -1,8 +1,17 @@
 <div class="container">
 	<div class="row">
 
-		<h1>QIDO</h1>
+		<h1>Query</h1>
 
+		<p>
+			<u>Q</u>uery based on <u>I</u>D for <u>D</u>ICOM <u>O</u>bjects (QIDO) enables you to search for studies, series and instances by patient ID, and receive
+			their unique identifiers to retrieve the binary representations with WADO. QIDO is currently awaiting letter ballot. The specification, as written, can be found
+			<a href="ftp://medical.nema.org/medical/dicom/supps/PC/sup166_pc.pdf" target="_blank">here</a>.
+		</p>
+		<h3>Methods</h3>
+		<p>Following are a list of methods accepted by a QIDO service. Click on a method for further detail.</p>
+
+		<!-- STUDY -->
 		<div class="restget restoperation">
 			<div class="restheading">
 				<h3>
@@ -10,7 +19,7 @@
 					<span class="restpath">/studies?...</span>
 				</h3>
 				<ul class="restoptions">
-					<li>Look for studies, series and instances for a particular patient</li>
+					<li>Look up studies (i.e., for a particular patient)</li>
 				</ul>
 			</div>
 			<div class="restcontent">
@@ -27,12 +36,12 @@
 						<tr>
 							<td class="code required">{dicomAttribute}</td>
 							<td>The field to filter results by.</td>
-							<td><span class="model-signature">See note below</span></td>
+							<td><span class="model-signature">See <a href="#dicomattrib">note</a></span></td>
 						</tr>
 						<tr>
 							<td class="code required">includefield</td>
 							<td>Includes the field to return without filtering on it.</td>
-							<td><span class="model-signature">{dicomAttribute} | all</span></td>
+							<td><span class="model-signature">{<a href="#dicomattrib">dicomAttribute</a>} | all</span></td>
 						</tr>
 						<tr>
 							<td class="code required">fuzzymatching</td>
@@ -79,10 +88,401 @@
 				</table>				
 
 			</div>
+		</div>
 
-			<p>
-				QIDO is currently awaiting letter ballot. The specification, as written, can be found
-				<a href="ftp://medical.nema.org/medical/dicom/supps/PC/sup166_pc.pdf">here</a>.
-			</p>
+		<!-- SERIES path -->
+		<div class="restget restoperation">
+			<div class="restheading">
+				<h3>
+					<span class="resthttp_method">get</span>
+					<span class="restpath">/studies/{studyUID}/series?...</span>
+				</h3>
+				<ul class="restoptions">
+					<li>Look up series in a study</li>
+				</ul>
+			</div>
+			<div class="restcontent">
+				<h4>Parameters</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+							<th>Data Type</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">{dicomAttribute}</td>
+							<td>The field to filter results by.</td>
+							<td><span class="model-signature">See <a href="#dicomattrib">note</a></span></td>
+						</tr>
+						<tr>
+							<td class="code required">includefield</td>
+							<td>Includes the field to return without filtering on it.</td>
+							<td><span class="model-signature">{<a href="#dicomattrib">dicomAttribute</a>} | all</span></td>
+						</tr>
+						<tr>
+							<td class="code required">fuzzymatching</td>
+							<td>See conformance statement for details.</td>
+							<td><span class="model-signature">boolean</span></td>
+						</tr>
+						<tr>
+							<td class="code required">limit</td>
+							<td>Limits the results to the specified number.</td>
+							<td><span class="model-signature">integer</span></td>
+						</tr>
+						<tr>
+							<td class="code required">offset</td>
+							<td>Skips the first number of specified results.</td>
+							<td><span class="model-signature">integer</span></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4>Headers</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Header</th>
+							<th>Description</th>
+							<th>Accepted Values</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">Accept</td>
+							<td>The representation scheme being posted to the RESTful service.</td>
+							<td>
+								multipart/related; type=application/dicom+xml;<br />
+								application/json
+							</td>
+						</tr>
+						<tr>
+							<td class="code required">Cache-control</td>
+							<td>If included, specifies that search results returned should be current and not cached.</td>
+							<td>no-cache</td>
+						</tr>
+					</tbody>
+				</table>				
+
+			</div>
+		</div>
+
+		<!-- SERIES direct -->
+		<div class="restget restoperation">
+			<div class="restheading">
+				<h3>
+					<span class="resthttp_method">get</span>
+					<span class="restpath">/series?...</span>
+				</h3>
+				<ul class="restoptions">
+					<li>Look up series (i.e., for a particular patient)</li>
+				</ul>
+			</div>
+			<div class="restcontent">
+				<h4>Parameters</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+							<th>Data Type</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">{dicomAttribute}</td>
+							<td>The field to filter results by.</td>
+							<td><span class="model-signature">See <a href="#dicomattrib">note</a></span></td>
+						</tr>
+						<tr>
+							<td class="code required">includefield</td>
+							<td>Includes the field to return without filtering on it.</td>
+							<td><span class="model-signature">{<a href="#dicomattrib">dicomAttribute</a>} | all</span></td>
+						</tr>
+						<tr>
+							<td class="code required">fuzzymatching</td>
+							<td>See conformance statement for details.</td>
+							<td><span class="model-signature">boolean</span></td>
+						</tr>
+						<tr>
+							<td class="code required">limit</td>
+							<td>Limits the results to the specified number.</td>
+							<td><span class="model-signature">integer</span></td>
+						</tr>
+						<tr>
+							<td class="code required">offset</td>
+							<td>Skips the first number of specified results.</td>
+							<td><span class="model-signature">integer</span></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4>Headers</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Header</th>
+							<th>Description</th>
+							<th>Accepted Values</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">Accept</td>
+							<td>The representation scheme being posted to the RESTful service.</td>
+							<td>
+								multipart/related; type=application/dicom+xml;<br />
+								application/json
+							</td>
+						</tr>
+						<tr>
+							<td class="code required">Cache-control</td>
+							<td>If included, specifies that search results returned should be current and not cached.</td>
+							<td>no-cache</td>
+						</tr>
+					</tbody>
+				</table>				
+
+			</div>
+		</div>
+
+		<!-- INSTANCES full path -->
+		<div class="restget restoperation">
+			<div class="restheading">
+				<h3>
+					<span class="resthttp_method">get</span>
+					<span class="restpath">/studies/{studyUID}/series/{seriesUID}/instances?...</span>
+				</h3>
+				<ul class="restoptions">
+					<li>Look up instances for a study/series</li>
+				</ul>
+			</div>
+			<div class="restcontent">
+				<h4>Parameters</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+							<th>Data Type</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">{dicomAttribute}</td>
+							<td>The field to filter results by.</td>
+							<td><span class="model-signature">See <a href="#dicomattrib">note</a></span></td>
+						</tr>
+						<tr>
+							<td class="code required">includefield</td>
+							<td>Includes the field to return without filtering on it.</td>
+							<td><span class="model-signature">{<a href="#dicomattrib">dicomAttribute</a>} | all</span></td>
+						</tr>
+						<tr>
+							<td class="code required">fuzzymatching</td>
+							<td>See conformance statement for details.</td>
+							<td><span class="model-signature">boolean</span></td>
+						</tr>
+						<tr>
+							<td class="code required">limit</td>
+							<td>Limits the results to the specified number.</td>
+							<td><span class="model-signature">integer</span></td>
+						</tr>
+						<tr>
+							<td class="code required">offset</td>
+							<td>Skips the first number of specified results.</td>
+							<td><span class="model-signature">integer</span></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4>Headers</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Header</th>
+							<th>Description</th>
+							<th>Accepted Values</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">Accept</td>
+							<td>The representation scheme being posted to the RESTful service.</td>
+							<td>
+								multipart/related; type=application/dicom+xml;<br />
+								application/json
+							</td>
+						</tr>
+						<tr>
+							<td class="code required">Cache-control</td>
+							<td>If included, specifies that search results returned should be current and not cached.</td>
+							<td>no-cache</td>
+						</tr>
+					</tbody>
+				</table>				
+
+			</div>
+		</div>
+
+		<!-- INSTANCES by study -->
+		<div class="restget restoperation">
+			<div class="restheading">
+				<h3>
+					<span class="resthttp_method">get</span>
+					<span class="restpath">/studies/{studyUID}/instances?...</span>
+				</h3>
+				<ul class="restoptions">
+					<li>Look up instances by study</li>
+				</ul>
+			</div>
+			<div class="restcontent">
+				<h4>Parameters</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+							<th>Data Type</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">{dicomAttribute}</td>
+							<td>The field to filter results by.</td>
+							<td><span class="model-signature">See <a href="#dicomattrib">note</a></span></td>
+						</tr>
+						<tr>
+							<td class="code required">includefield</td>
+							<td>Includes the field to return without filtering on it.</td>
+							<td><span class="model-signature">{<a href="#dicomattrib">dicomAttribute</a>} | all</span></td>
+						</tr>
+						<tr>
+							<td class="code required">fuzzymatching</td>
+							<td>See conformance statement for details.</td>
+							<td><span class="model-signature">boolean</span></td>
+						</tr>
+						<tr>
+							<td class="code required">limit</td>
+							<td>Limits the results to the specified number.</td>
+							<td><span class="model-signature">integer</span></td>
+						</tr>
+						<tr>
+							<td class="code required">offset</td>
+							<td>Skips the first number of specified results.</td>
+							<td><span class="model-signature">integer</span></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4>Headers</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Header</th>
+							<th>Description</th>
+							<th>Accepted Values</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">Accept</td>
+							<td>The representation scheme being posted to the RESTful service.</td>
+							<td>
+								multipart/related; type=application/dicom+xml;<br />
+								application/json
+							</td>
+						</tr>
+						<tr>
+							<td class="code required">Cache-control</td>
+							<td>If included, specifies that search results returned should be current and not cached.</td>
+							<td>no-cache</td>
+						</tr>
+					</tbody>
+				</table>				
+
+			</div>
+		</div>
+
+		<!-- INSTANCES direct -->
+		<div class="restget restoperation">
+			<div class="restheading">
+				<h3>
+					<span class="resthttp_method">get</span>
+					<span class="restpath">/instances?...</span>
+				</h3>
+				<ul class="restoptions">
+					<li>Look up instances</li>
+				</ul>
+			</div>
+			<div class="restcontent">
+				<h4>Parameters</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+							<th>Data Type</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">{dicomAttribute}</td>
+							<td>The field to filter results by.</td>
+							<td><span class="model-signature">See <a href="#dicomattrib">note</a></span></td>
+						</tr>
+						<tr>
+							<td class="code required">includefield</td>
+							<td>Includes the field to return without filtering on it.</td>
+							<td><span class="model-signature">{<a href="#dicomattrib">dicomAttribute</a>} | all</span></td>
+						</tr>
+						<tr>
+							<td class="code required">fuzzymatching</td>
+							<td>See conformance statement for details.</td>
+							<td><span class="model-signature">boolean</span></td>
+						</tr>
+						<tr>
+							<td class="code required">limit</td>
+							<td>Limits the results to the specified number.</td>
+							<td><span class="model-signature">integer</span></td>
+						</tr>
+						<tr>
+							<td class="code required">offset</td>
+							<td>Skips the first number of specified results.</td>
+							<td><span class="model-signature">integer</span></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4>Headers</h4>
+				<table class="resttable">
+					<thead>
+						<tr>
+							<th>Header</th>
+							<th>Description</th>
+							<th>Accepted Values</th>
+						</tr>
+					</thead>
+					<tbody class="operation-params">
+						<tr>
+							<td class="code required">Accept</td>
+							<td>The representation scheme being posted to the RESTful service.</td>
+							<td>
+								multipart/related; type=application/dicom+xml;<br />
+								application/json
+							</td>
+						</tr>
+						<tr>
+							<td class="code required">Cache-control</td>
+							<td>If included, specifies that search results returned should be current and not cached.</td>
+							<td>no-cache</td>
+						</tr>
+					</tbody>
+				</table>				
+			</div>
+
+			
 		</div>
 	</div>

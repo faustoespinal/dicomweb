@@ -1,0 +1,645 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'grunt-karma',
+1 verbose cli   '--save' ]
+2 info using npm@1.2.32
+3 info using node@v0.10.12
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose read json D:\Users\axlkq\Documents\GitHub\dicomweb\package.json
+6 warn package.json dicomdocs@0.0.0 No repository field.
+7 warn package.json dicomdocs@0.0.0 No readme data.
+8 verbose from cache D:\Users\axlkq\Documents\GitHub\dicomweb\package.json
+9 verbose readDependencies using package.json deps
+10 verbose cache add [ 'grunt-karma@~0.6.1', null ]
+11 verbose cache add name=undefined spec="grunt-karma@~0.6.1" args=["grunt-karma@~0.6.1",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'grunt-karma@~0.6.1',
+12 verbose parsed url   path: 'grunt-karma@~0.6.1',
+12 verbose parsed url   href: 'grunt-karma@~0.6.1' }
+13 verbose cache add name="grunt-karma" spec="~0.6.1" args=["grunt-karma","~0.6.1"]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: '~0.6.1',
+14 verbose parsed url   path: '~0.6.1',
+14 verbose parsed url   href: '~0.6.1' }
+15 verbose addNamed [ 'grunt-karma', '~0.6.1' ]
+16 verbose addNamed [ null, '>=0.6.1- <0.7.0-' ]
+17 silly lockFile 1be1e514-grunt-karma-0-6-1 grunt-karma@~0.6.1
+18 verbose lock grunt-karma@~0.6.1 D:\Users\axlkq\AppData\Roaming\npm-cache\1be1e514-grunt-karma-0-6-1.lock
+19 silly addNameRange { name: 'grunt-karma',
+19 silly addNameRange   range: '>=0.6.1- <0.7.0-',
+19 silly addNameRange   hasData: false }
+20 verbose url raw grunt-karma
+21 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-karma' ]
+22 verbose url resolved https://registry.npmjs.org/grunt-karma
+23 info trying registry request attempt 1 at 09:38:26
+24 verbose etag "EP6ULKP7UOKEU7IM3N27U9HDY"
+25 http GET https://registry.npmjs.org/grunt-karma
+26 http 200 https://registry.npmjs.org/grunt-karma
+27 silly registry.get cb [ 200,
+27 silly registry.get   { vary: 'Accept',
+27 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+27 silly registry.get     etag: '"1KXNSM0LLTPHBMF3DN9B86M45"',
+27 silly registry.get     date: 'Mon, 19 Aug 2013 13:38:27 GMT',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'content-length': '97135' } ]
+28 silly addNameRange number 2 { name: 'grunt-karma', range: '>=0.6.1- <0.7.0-', hasData: true }
+29 silly addNameRange versions [ 'grunt-karma',
+29 silly addNameRange   [ '0.3.0',
+29 silly addNameRange     '0.4.0',
+29 silly addNameRange     '0.4.1',
+29 silly addNameRange     '0.4.2',
+29 silly addNameRange     '0.4.3',
+29 silly addNameRange     '0.4.4',
+29 silly addNameRange     '0.5.0',
+29 silly addNameRange     '0.4.5',
+29 silly addNameRange     '0.5.1',
+29 silly addNameRange     '0.5.2',
+29 silly addNameRange     '0.4.6',
+29 silly addNameRange     '0.5.3',
+29 silly addNameRange     '0.5.4',
+29 silly addNameRange     '0.6.0',
+29 silly addNameRange     '0.6.1',
+29 silly addNameRange     '0.7.0' ] ]
+30 verbose addNamed [ 'grunt-karma', '0.6.1' ]
+31 verbose addNamed [ '0.6.1', '0.6.1' ]
+32 silly lockFile d0681550-grunt-karma-0-6-1 grunt-karma@0.6.1
+33 verbose lock grunt-karma@0.6.1 D:\Users\axlkq\AppData\Roaming\npm-cache\d0681550-grunt-karma-0-6-1.lock
+34 silly lockFile dc99c121-runt-karma-grunt-karma-0-6-1-tgz https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.6.1.tgz
+35 verbose lock https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.6.1.tgz D:\Users\axlkq\AppData\Roaming\npm-cache\dc99c121-runt-karma-grunt-karma-0-6-1-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.6.1.tgz',
+36 verbose addRemoteTarball   '6bfa46c8b9fe8c1bc4f01c069b9eebf0c75d0f36' ]
+37 info retry fetch attempt 1 at 09:38:28
+38 verbose fetch to= D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\tmp.tgz
+39 http GET https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.6.1.tgz
+40 http 200 https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.6.1.tgz
+41 verbose tar unpack D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\tmp.tgz
+42 silly lockFile b3c76740-08947-0-5034613169264048-package tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\package
+43 verbose lock tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\package D:\Users\axlkq\AppData\Roaming\npm-cache\b3c76740-08947-0-5034613169264048-package.lock
+44 silly lockFile 673a673b-08947-0-5034613169264048-tmp-tgz tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\tmp.tgz
+45 verbose lock tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\tmp.tgz D:\Users\axlkq\AppData\Roaming\npm-cache\673a673b-08947-0-5034613169264048-tmp-tgz.lock
+46 silly gunzTarPerm modes [ '755', '644' ]
+47 silly gunzTarPerm extractEntry package.json
+48 silly gunzTarPerm extractEntry .npmignore
+49 silly gunzTarPerm extractEntry README.md
+50 silly gunzTarPerm extractEntry LICENSE
+51 silly gunzTarPerm extractEntry Gruntfile.js
+52 silly gunzTarPerm extractEntry .idea/.name
+53 silly gunzTarPerm extractEntry .idea/dictionaries/dave.xml
+54 silly gunzTarPerm extractEntry .idea/encodings.xml
+55 silly gunzTarPerm extractEntry .idea/grunt-karma.iml
+56 silly gunzTarPerm extractEntry .idea/inspectionProfiles/Project_Default.xml
+57 silly gunzTarPerm extractEntry .idea/inspectionProfiles/profiles_settings.xml
+58 silly gunzTarPerm extractEntry .idea/misc.xml
+59 silly gunzTarPerm extractEntry .idea/modules.xml
+60 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+61 silly gunzTarPerm extractEntry .idea/vcs.xml
+62 silly gunzTarPerm extractEntry .idea/workspace.xml
+63 silly gunzTarPerm extractEntry TODO.md
+64 silly gunzTarPerm extractEntry lib/background.js
+65 silly gunzTarPerm extractEntry CHANGELOG.md
+66 silly gunzTarPerm extractEntry tasks/grunt-karma.js
+67 silly gunzTarPerm extractEntry test/grunt-karma-test.js
+68 verbose read json D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\package\package.json
+69 silly lockFile b3c76740-08947-0-5034613169264048-package tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\package
+70 silly lockFile b3c76740-08947-0-5034613169264048-package tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\package
+71 silly lockFile 673a673b-08947-0-5034613169264048-tmp-tgz tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\tmp.tgz
+72 silly lockFile 673a673b-08947-0-5034613169264048-tmp-tgz tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\tmp.tgz
+73 verbose from cache D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\package\package.json
+74 verbose tar pack [ 'D:\\Users\\axlkq\\AppData\\Roaming\\npm-cache\\grunt-karma\\0.6.1\\package.tgz',
+74 verbose tar pack   'D:\\Users\\axlkq\\AppData\\Local\\Temp\\npm-6720\\1376919508947-0.5034613169264048\\package' ]
+75 verbose tarball D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+76 verbose folder D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\package
+77 silly lockFile b3c76740-08947-0-5034613169264048-package tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\package
+78 verbose lock tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\package D:\Users\axlkq\AppData\Roaming\npm-cache\b3c76740-08947-0-5034613169264048-package.lock
+79 silly lockFile 9e0f1604-he-grunt-karma-0-6-1-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+80 verbose lock tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz D:\Users\axlkq\AppData\Roaming\npm-cache\9e0f1604-he-grunt-karma-0-6-1-package-tgz.lock
+81 silly lockFile b3c76740-08947-0-5034613169264048-package tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\package
+82 silly lockFile b3c76740-08947-0-5034613169264048-package tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919508947-0.5034613169264048\package
+83 silly lockFile 9e0f1604-he-grunt-karma-0-6-1-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+84 silly lockFile 9e0f1604-he-grunt-karma-0-6-1-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+85 silly lockFile 3925ea49--cache-grunt-karma-0-6-1-package D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package
+86 verbose lock D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package D:\Users\axlkq\AppData\Roaming\npm-cache\3925ea49--cache-grunt-karma-0-6-1-package.lock
+87 silly lockFile 3925ea49--cache-grunt-karma-0-6-1-package D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package
+88 silly lockFile 3925ea49--cache-grunt-karma-0-6-1-package D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package
+89 verbose tar unpack D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+90 silly lockFile e6d54256--cache-grunt-karma-0-6-1-package tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package
+91 verbose lock tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package D:\Users\axlkq\AppData\Roaming\npm-cache\e6d54256--cache-grunt-karma-0-6-1-package.lock
+92 silly lockFile 9e0f1604-he-grunt-karma-0-6-1-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+93 verbose lock tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz D:\Users\axlkq\AppData\Roaming\npm-cache\9e0f1604-he-grunt-karma-0-6-1-package-tgz.lock
+94 silly gunzTarPerm modes [ '755', '644' ]
+95 silly gunzTarPerm extractEntry package.json
+96 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+97 silly gunzTarPerm extractEntry .npmignore
+98 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+99 silly gunzTarPerm extractEntry README.md
+100 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+101 silly gunzTarPerm extractEntry LICENSE
+102 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+103 silly gunzTarPerm extractEntry Gruntfile.js
+104 silly gunzTarPerm modified mode [ 'Gruntfile.js', 438, 420 ]
+105 silly gunzTarPerm extractEntry CHANGELOG.md
+106 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 438, 420 ]
+107 silly gunzTarPerm extractEntry .idea/.name
+108 silly gunzTarPerm modified mode [ '.idea/.name', 438, 420 ]
+109 silly gunzTarPerm extractEntry .idea/dictionaries/dave.xml
+110 silly gunzTarPerm modified mode [ '.idea/dictionaries/dave.xml', 438, 420 ]
+111 silly gunzTarPerm extractEntry .idea/encodings.xml
+112 silly gunzTarPerm modified mode [ '.idea/encodings.xml', 438, 420 ]
+113 silly gunzTarPerm extractEntry .idea/grunt-karma.iml
+114 silly gunzTarPerm modified mode [ '.idea/grunt-karma.iml', 438, 420 ]
+115 silly gunzTarPerm extractEntry .idea/inspectionProfiles/profiles_settings.xml
+116 silly gunzTarPerm modified mode [ '.idea/inspectionProfiles/profiles_settings.xml', 438, 420 ]
+117 silly gunzTarPerm extractEntry .idea/inspectionProfiles/Project_Default.xml
+118 silly gunzTarPerm modified mode [ '.idea/inspectionProfiles/Project_Default.xml', 438, 420 ]
+119 silly gunzTarPerm extractEntry .idea/misc.xml
+120 silly gunzTarPerm modified mode [ '.idea/misc.xml', 438, 420 ]
+121 silly gunzTarPerm extractEntry .idea/modules.xml
+122 silly gunzTarPerm modified mode [ '.idea/modules.xml', 438, 420 ]
+123 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+124 silly gunzTarPerm modified mode [ '.idea/scopes/scope_settings.xml', 438, 420 ]
+125 silly gunzTarPerm extractEntry .idea/vcs.xml
+126 silly gunzTarPerm modified mode [ '.idea/vcs.xml', 438, 420 ]
+127 silly gunzTarPerm extractEntry .idea/workspace.xml
+128 silly gunzTarPerm modified mode [ '.idea/workspace.xml', 438, 420 ]
+129 silly gunzTarPerm extractEntry lib/background.js
+130 silly gunzTarPerm modified mode [ 'lib/background.js', 438, 420 ]
+131 silly gunzTarPerm extractEntry tasks/grunt-karma.js
+132 silly gunzTarPerm modified mode [ 'tasks/grunt-karma.js', 438, 420 ]
+133 silly gunzTarPerm extractEntry test/grunt-karma-test.js
+134 silly gunzTarPerm modified mode [ 'test/grunt-karma-test.js', 438, 420 ]
+135 silly gunzTarPerm extractEntry TODO.md
+136 silly gunzTarPerm modified mode [ 'TODO.md', 438, 420 ]
+137 verbose read json D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package\package.json
+138 silly lockFile e6d54256--cache-grunt-karma-0-6-1-package tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package
+139 silly lockFile e6d54256--cache-grunt-karma-0-6-1-package tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package
+140 silly lockFile 9e0f1604-he-grunt-karma-0-6-1-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+141 silly lockFile 9e0f1604-he-grunt-karma-0-6-1-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+142 verbose from cache D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package\package.json
+143 verbose chmod D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz 644
+144 silly chown skipping for windows D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+145 silly lockFile dc99c121-runt-karma-grunt-karma-0-6-1-tgz https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.6.1.tgz
+146 silly lockFile dc99c121-runt-karma-grunt-karma-0-6-1-tgz https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.6.1.tgz
+147 silly lockFile d0681550-grunt-karma-0-6-1 grunt-karma@0.6.1
+148 silly lockFile d0681550-grunt-karma-0-6-1 grunt-karma@0.6.1
+149 silly lockFile 1be1e514-grunt-karma-0-6-1 grunt-karma@~0.6.1
+150 silly lockFile 1be1e514-grunt-karma-0-6-1 grunt-karma@~0.6.1
+151 silly resolved [ { name: 'grunt-karma',
+151 silly resolved     version: '0.6.1',
+151 silly resolved     description: 'grunt plugin for karma test runner',
+151 silly resolved     main: 'tasks/grunt-karma.js',
+151 silly resolved     repository:
+151 silly resolved      { type: 'git',
+151 silly resolved        url: 'https://github.com/karma-runner/grunt-karma.git' },
+151 silly resolved     keywords: [ 'gruntplugin', 'karma', 'grunt', 'test', 'unit', 'runner', 'TDD' ],
+151 silly resolved     scripts: { test: 'grunt test' },
+151 silly resolved     author: { name: 'Dave Geddes' },
+151 silly resolved     license: 'MIT',
+151 silly resolved     readmeFilename: 'README.md',
+151 silly resolved     dependencies: { optimist: '~0.6.0' },
+151 silly resolved     devDependencies:
+151 silly resolved      { grunt: '~0.4.1',
+151 silly resolved        'expect.js': '~0.2.0',
+151 silly resolved        'grunt-release': '~0.5.1',
+151 silly resolved        'grunt-contrib-watch': '~0.2.0',
+151 silly resolved        'grunt-conventional-changelog': '~0.0.12',
+151 silly resolved        'karma-mocha': '~0.1.0' },
+151 silly resolved     peerDependencies: { grunt: '0.4.x', karma: '~0.10.0' },
+151 silly resolved     readme: '#grunt-karma\nGrunt plugin for [Karma](https://github.com/karma-runner/karma)\nNOTE: this plugin requires Grunt 0.4.x\n\n##Getting Started\nFrom the same directory as your project\'s Gruntfile and package.json, install this plugin with the following command:\n\n`npm install grunt-karma --save-dev`\n\nNote that even numbered minor releases follow Karma\'s stable channel, while odd numbers follow the unstable channel. So grunt-karma@0.6.x goes with karma@0.10.x, while grunt-karma@0.7.x goes with karma@0.11.x\n\nOnce that\'s done, add this line to your project\'s Gruntfile:\n\n```js\ngrunt.loadNpmTasks(\'grunt-karma\');\n```\n\n##Config\nInside your `Gruntfile.js` file, add a section named *karma*, containing any number of configurations for running karma. You can either put your config in a [karma config file](http://karma-runner.github.com/0.8/config/configuration-file.html) or leave it all in your Gruntfile (recommended). \n\n###Here\'s an example that points to the config file:\n\n```js\nkarma: {\n  unit: {\n    configFile: \'karma.conf.js\'\n  }\n}\n```\n\n###Here\'s an example that puts the config in the Gruntfile:\n\n```js\nkarma: {\n  unit: {\n    options: {\n      files: [\'test/**/*.js\']\n    }\n  }\n}\n```\n\nYou can override any of the config file\'s settings by putting them directly in the Gruntfile:\n\n```js\nkarma: {\n  unit: {\n    configFile: \'karma.conf.js\',\n    runnerPort: 9999,\n    singleRun: true,\n    browsers: [\'PhantomJS\']\n  }\n}\n```\n\n##Sharing Configs\nIf you have multiple targets, it may be helpful to share common configuration settings between them. Grunt-karma supports this by using the `options` property:\n\n```js\nkarma: {\n  options: {\n    configFile: \'karma.conf.js\',\n    runnerPort: 9999,\n    browsers: [\'Chrome\', \'Firefox\']\n  },\n  continuous: {\n    singleRun: true,\n    browsers: [\'PhantomJS\']\n  },\n  dev: {\n    reporters: \'dots\'\n  }\n}\n```\n\nIn this example the `continuous` and `dev` targets will both use the `configFile` and `runnerPort` specified in the `options`. But the `continuous` target will override the browser setting to use PhantomJS, and also run as a singleRun. The `dev` target will simply change the reporter to dots.\n\n##Running tests\nThere are three ways to run your tests with karma:\n\n###Karma Server with Auto Runs on File Change\nSetting the `autoWatch` option to true will instruct karma to start a server and watch for changes to files, running tests automatically:\n\n```js\nkarma: {\n  unit: {\n    configFile: \'karma.conf.js\',\n    autoWatch: true\n  }\n}\n```\nNow run `$ grunt karma`\n\nHowever, usually Grunt projects watch many types of files using [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) or [grunt-regarde](https://github.com/yeoman/grunt-regarde), so this option isn\'t preferred.\n\n###Karma Server with Grunt Watch/Regarde\nConfig karma like usual (without the autoWatch option), and add `background:true`:\n\n```js\nkarma: {\n  unit: {\n    configFile: \'karma.conf.js\',\n    background: true\n  }\n}\n```\nThe `background` option will tell grunt to run karma in a child process so it doesn\'t block subsequent grunt tasks.\n\nConfig your `watch` or `regarde` task to run the karma task with the `:run` flag. For example:\n\n```js\nwatch: {\n  //run unit tests with karma (server needs to be already running)\n  karma: {\n    files: [\'app/js/**/*.js\', \'test/browser/**/*.js\'],\n    tasks: [\'karma:unit:run\'] //NOTE the :run flag\n  }\n},\n```\n\nIn your terminal window run `$ grunt karma:unit watch`, which runs both the karma task and the watch task. Now when grunt watch detects a change to one of your watched files, it will run the tests specified in the `unit` target using the already running karma server. This is the preferred method for development.\n\n###Single Run\nKeeping a browser window & karma server running during development is productive, but not a good solution for build processes. For that reason karma provides a "continuous integration" mode, which will launch the specified browser(s), run the tests, and close the browser(s). It also supports running tests in [PhantomJS](http://phantomjs.org/), a headless webkit browser which is great for running tests as part of a build. To run tests in continous integration mode just add the `singleRun` option:\n\n```js\nkarma: {\n  unit: {\n    configFile: \'config/karma.conf.js\',\n  },\n  //continuous integration mode: run tests once in PhantomJS browser.\n  continuous: {\n    configFile: \'config/karma.conf.js\',\n    singleRun: true,\n    browsers: [\'PhantomJS\']\n  },\n}\n```\n\nThe build would then run `grunt karma:continuous` to start PhantomJS, run tests, and close PhantomJS.\n\n##Grep / Passing Options to Karma Adapters\nAny cli args will be automatically parsed and sent on to adapters in the `config.args` property. So for example to use Mocha\'s useful `grep` feature, run grunt-karma like so: \n\n```\ngrunt karma:dev watch --grep=mypattern\n```\n\nNote that adapters like [karma-mocha](https://github.com/karma-runner/karma-mocha) have to support the args you\'re wanting to pass to them.\n\n##License\nMIT License\n',
+151 silly resolved     bugs: { url: 'https://github.com/karma-runner/grunt-karma/issues' },
+151 silly resolved     _id: 'grunt-karma@0.6.1',
+151 silly resolved     dist: { shasum: '6fec4a8a0c517a4039f7d3cca7cab9be87483b7f' },
+151 silly resolved     _from: 'grunt-karma@~0.6.1',
+151 silly resolved     _resolved: 'https://registry.npmjs.org/grunt-karma/-/grunt-karma-0.6.1.tgz' } ]
+152 info install grunt-karma@0.6.1 into D:\Users\axlkq\Documents\GitHub\dicomweb
+153 info installOne grunt-karma@0.6.1
+154 verbose from cache D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package\package.json
+155 info D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma unbuild
+156 verbose read json D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma\package.json
+157 verbose tar unpack D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+158 silly lockFile 38011f36-icomweb-node-modules-grunt-karma tar://D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma
+159 verbose lock tar://D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma D:\Users\axlkq\AppData\Roaming\npm-cache\38011f36-icomweb-node-modules-grunt-karma.lock
+160 silly lockFile 9e0f1604-he-grunt-karma-0-6-1-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+161 verbose lock tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz D:\Users\axlkq\AppData\Roaming\npm-cache\9e0f1604-he-grunt-karma-0-6-1-package-tgz.lock
+162 silly gunzTarPerm modes [ '755', '644' ]
+163 silly gunzTarPerm extractEntry package.json
+164 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+165 silly gunzTarPerm extractEntry .npmignore
+166 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+167 silly gunzTarPerm extractEntry README.md
+168 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+169 silly gunzTarPerm extractEntry LICENSE
+170 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+171 silly gunzTarPerm extractEntry Gruntfile.js
+172 silly gunzTarPerm modified mode [ 'Gruntfile.js', 438, 420 ]
+173 silly gunzTarPerm extractEntry CHANGELOG.md
+174 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 438, 420 ]
+175 silly gunzTarPerm extractEntry .idea/.name
+176 silly gunzTarPerm modified mode [ '.idea/.name', 438, 420 ]
+177 silly gunzTarPerm extractEntry .idea/dictionaries/dave.xml
+178 silly gunzTarPerm modified mode [ '.idea/dictionaries/dave.xml', 438, 420 ]
+179 silly gunzTarPerm extractEntry .idea/encodings.xml
+180 silly gunzTarPerm modified mode [ '.idea/encodings.xml', 438, 420 ]
+181 silly gunzTarPerm extractEntry .idea/grunt-karma.iml
+182 silly gunzTarPerm modified mode [ '.idea/grunt-karma.iml', 438, 420 ]
+183 silly gunzTarPerm extractEntry .idea/inspectionProfiles/profiles_settings.xml
+184 silly gunzTarPerm modified mode [ '.idea/inspectionProfiles/profiles_settings.xml', 438, 420 ]
+185 silly gunzTarPerm extractEntry .idea/inspectionProfiles/Project_Default.xml
+186 silly gunzTarPerm modified mode [ '.idea/inspectionProfiles/Project_Default.xml', 438, 420 ]
+187 silly gunzTarPerm extractEntry .idea/misc.xml
+188 silly gunzTarPerm modified mode [ '.idea/misc.xml', 438, 420 ]
+189 silly gunzTarPerm extractEntry .idea/modules.xml
+190 silly gunzTarPerm modified mode [ '.idea/modules.xml', 438, 420 ]
+191 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+192 silly gunzTarPerm modified mode [ '.idea/scopes/scope_settings.xml', 438, 420 ]
+193 silly gunzTarPerm extractEntry .idea/vcs.xml
+194 silly gunzTarPerm modified mode [ '.idea/vcs.xml', 438, 420 ]
+195 silly gunzTarPerm extractEntry .idea/workspace.xml
+196 silly gunzTarPerm modified mode [ '.idea/workspace.xml', 438, 420 ]
+197 silly gunzTarPerm extractEntry lib/background.js
+198 silly gunzTarPerm modified mode [ 'lib/background.js', 438, 420 ]
+199 silly gunzTarPerm extractEntry tasks/grunt-karma.js
+200 silly gunzTarPerm modified mode [ 'tasks/grunt-karma.js', 438, 420 ]
+201 silly gunzTarPerm extractEntry test/grunt-karma-test.js
+202 silly gunzTarPerm modified mode [ 'test/grunt-karma-test.js', 438, 420 ]
+203 silly gunzTarPerm extractEntry TODO.md
+204 silly gunzTarPerm modified mode [ 'TODO.md', 438, 420 ]
+205 verbose read json D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma\package.json
+206 silly lockFile 38011f36-icomweb-node-modules-grunt-karma tar://D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma
+207 silly lockFile 38011f36-icomweb-node-modules-grunt-karma tar://D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma
+208 silly lockFile 9e0f1604-he-grunt-karma-0-6-1-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+209 silly lockFile 9e0f1604-he-grunt-karma-0-6-1-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\grunt-karma\0.6.1\package.tgz
+210 info preinstall grunt-karma@0.6.1
+211 verbose from cache D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma\package.json
+212 verbose readDependencies using package.json deps
+213 verbose from cache D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma\package.json
+214 verbose readDependencies using package.json deps
+215 verbose cache add [ 'optimist@~0.6.0', null ]
+216 verbose cache add name=undefined spec="optimist@~0.6.0" args=["optimist@~0.6.0",null]
+217 verbose parsed url { protocol: null,
+217 verbose parsed url   slashes: null,
+217 verbose parsed url   auth: null,
+217 verbose parsed url   host: null,
+217 verbose parsed url   port: null,
+217 verbose parsed url   hostname: null,
+217 verbose parsed url   hash: null,
+217 verbose parsed url   search: null,
+217 verbose parsed url   query: null,
+217 verbose parsed url   pathname: 'optimist@~0.6.0',
+217 verbose parsed url   path: 'optimist@~0.6.0',
+217 verbose parsed url   href: 'optimist@~0.6.0' }
+218 verbose cache add name="optimist" spec="~0.6.0" args=["optimist","~0.6.0"]
+219 verbose parsed url { protocol: null,
+219 verbose parsed url   slashes: null,
+219 verbose parsed url   auth: null,
+219 verbose parsed url   host: null,
+219 verbose parsed url   port: null,
+219 verbose parsed url   hostname: null,
+219 verbose parsed url   hash: null,
+219 verbose parsed url   search: null,
+219 verbose parsed url   query: null,
+219 verbose parsed url   pathname: '~0.6.0',
+219 verbose parsed url   path: '~0.6.0',
+219 verbose parsed url   href: '~0.6.0' }
+220 verbose addNamed [ 'optimist', '~0.6.0' ]
+221 verbose addNamed [ null, '>=0.6.0- <0.7.0-' ]
+222 silly lockFile 07193858-optimist-0-6-0 optimist@~0.6.0
+223 verbose lock optimist@~0.6.0 D:\Users\axlkq\AppData\Roaming\npm-cache\07193858-optimist-0-6-0.lock
+224 silly addNameRange { name: 'optimist', range: '>=0.6.0- <0.7.0-', hasData: false }
+225 verbose url raw optimist
+226 verbose url resolving [ 'https://registry.npmjs.org/', './optimist' ]
+227 verbose url resolved https://registry.npmjs.org/optimist
+228 info trying registry request attempt 1 at 09:38:58
+229 verbose etag "7VTLKGSF8BV0P8PMZG3SDUJ94"
+230 http GET https://registry.npmjs.org/optimist
+231 http 200 https://registry.npmjs.org/optimist
+232 silly registry.get cb [ 200,
+232 silly registry.get   { vary: 'Accept',
+232 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+232 silly registry.get     etag: '"42LNQOUC82PHB34MQ23P8M5UO"',
+232 silly registry.get     date: 'Mon, 19 Aug 2013 13:38:59 GMT',
+232 silly registry.get     'content-type': 'application/json',
+232 silly registry.get     'content-length': '123805' } ]
+233 silly addNameRange number 2 { name: 'optimist', range: '>=0.6.0- <0.7.0-', hasData: true }
+234 silly addNameRange versions [ 'optimist',
+234 silly addNameRange   [ '0.0.1',
+234 silly addNameRange     '0.0.2',
+234 silly addNameRange     '0.0.4',
+234 silly addNameRange     '0.0.5',
+234 silly addNameRange     '0.0.6',
+234 silly addNameRange     '0.0.7',
+234 silly addNameRange     '0.1.0',
+234 silly addNameRange     '0.1.1',
+234 silly addNameRange     '0.1.2',
+234 silly addNameRange     '0.1.3',
+234 silly addNameRange     '0.1.4',
+234 silly addNameRange     '0.1.5',
+234 silly addNameRange     '0.1.6',
+234 silly addNameRange     '0.1.7',
+234 silly addNameRange     '0.1.8',
+234 silly addNameRange     '0.1.9',
+234 silly addNameRange     '0.0.3',
+234 silly addNameRange     '0.2.0',
+234 silly addNameRange     '0.2.1',
+234 silly addNameRange     '0.2.2',
+234 silly addNameRange     '0.2.3',
+234 silly addNameRange     '0.2.4',
+234 silly addNameRange     '0.2.5',
+234 silly addNameRange     '0.2.6',
+234 silly addNameRange     '0.2.7',
+234 silly addNameRange     '0.2.8',
+234 silly addNameRange     '0.3.0',
+234 silly addNameRange     '0.3.1',
+234 silly addNameRange     '0.3.3',
+234 silly addNameRange     '0.3.4',
+234 silly addNameRange     '0.3.5',
+234 silly addNameRange     '0.3.6',
+234 silly addNameRange     '0.3.7',
+234 silly addNameRange     '0.4.0',
+234 silly addNameRange     '0.5.0',
+234 silly addNameRange     '0.5.1',
+234 silly addNameRange     '0.5.2',
+234 silly addNameRange     '0.6.0' ] ]
+235 verbose addNamed [ 'optimist', '0.6.0' ]
+236 verbose addNamed [ '0.6.0', '0.6.0' ]
+237 silly lockFile 6403b4d6-optimist-0-6-0 optimist@0.6.0
+238 verbose lock optimist@0.6.0 D:\Users\axlkq\AppData\Roaming\npm-cache\6403b4d6-optimist-0-6-0.lock
+239 silly lockFile 8def609d--org-optimist-optimist-0-6-0-tgz https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz
+240 verbose lock https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz D:\Users\axlkq\AppData\Roaming\npm-cache\8def609d--org-optimist-optimist-0-6-0-tgz.lock
+241 verbose addRemoteTarball [ 'https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz',
+241 verbose addRemoteTarball   '69424826f3405f79f142e6fc3d9ae58d4dbb9200' ]
+242 info retry fetch attempt 1 at 09:38:59
+243 verbose fetch to= D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\tmp.tgz
+244 http GET https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz
+245 http 200 https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz
+246 verbose tar unpack D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\tmp.tgz
+247 silly lockFile bed21ee9-39526-0-8248614827170968-package tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\package
+248 verbose lock tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\package D:\Users\axlkq\AppData\Roaming\npm-cache\bed21ee9-39526-0-8248614827170968-package.lock
+249 silly lockFile 80c30f91-39526-0-8248614827170968-tmp-tgz tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\tmp.tgz
+250 verbose lock tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\tmp.tgz D:\Users\axlkq\AppData\Roaming\npm-cache\80c30f91-39526-0-8248614827170968-tmp-tgz.lock
+251 silly gunzTarPerm modes [ '755', '644' ]
+252 silly gunzTarPerm extractEntry package.json
+253 silly gunzTarPerm extractEntry LICENSE
+254 silly gunzTarPerm extractEntry index.js
+255 silly gunzTarPerm extractEntry .travis.yml
+256 silly gunzTarPerm extractEntry example/bool.js
+257 silly gunzTarPerm extractEntry example/default_singles.js
+258 silly gunzTarPerm extractEntry example/divide.js
+259 silly gunzTarPerm extractEntry example/line_count.js
+260 silly gunzTarPerm extractEntry example/default_hash.js
+261 silly gunzTarPerm extractEntry example/line_count_wrap.js
+262 silly gunzTarPerm extractEntry example/nonopt.js
+263 silly gunzTarPerm extractEntry example/reflect.js
+264 silly gunzTarPerm extractEntry example/short.js
+265 silly gunzTarPerm extractEntry example/string.js
+266 silly gunzTarPerm extractEntry example/boolean_single.js
+267 silly gunzTarPerm extractEntry example/usage-options.js
+268 silly gunzTarPerm extractEntry example/boolean_double.js
+269 silly gunzTarPerm extractEntry example/xup.js
+270 silly gunzTarPerm extractEntry example/line_count_options.js
+271 silly gunzTarPerm extractEntry readme.markdown
+272 silly gunzTarPerm extractEntry test/_.js
+273 silly gunzTarPerm extractEntry test/dash.js
+274 silly gunzTarPerm extractEntry test/parse.js
+275 silly gunzTarPerm extractEntry test/parse_modified.js
+276 silly gunzTarPerm extractEntry test/short.js
+277 silly gunzTarPerm extractEntry test/usage.js
+278 silly gunzTarPerm extractEntry test/whitespace.js
+279 silly gunzTarPerm extractEntry test/_/argv.js
+280 silly gunzTarPerm extractEntry test/_/bin.js
+281 verbose read json D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\package\package.json
+282 silly lockFile bed21ee9-39526-0-8248614827170968-package tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\package
+283 silly lockFile bed21ee9-39526-0-8248614827170968-package tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\package
+284 silly lockFile 80c30f91-39526-0-8248614827170968-tmp-tgz tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\tmp.tgz
+285 silly lockFile 80c30f91-39526-0-8248614827170968-tmp-tgz tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\tmp.tgz
+286 verbose from cache D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\package\package.json
+287 verbose tar pack [ 'D:\\Users\\axlkq\\AppData\\Roaming\\npm-cache\\optimist\\0.6.0\\package.tgz',
+287 verbose tar pack   'D:\\Users\\axlkq\\AppData\\Local\\Temp\\npm-6720\\1376919539526-0.8248614827170968\\package' ]
+288 verbose tarball D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz
+289 verbose folder D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\package
+290 silly lockFile bed21ee9-39526-0-8248614827170968-package tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\package
+291 verbose lock tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\package D:\Users\axlkq\AppData\Roaming\npm-cache\bed21ee9-39526-0-8248614827170968-package.lock
+292 silly lockFile bf60fc1f-cache-optimist-0-6-0-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz
+293 verbose lock tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz D:\Users\axlkq\AppData\Roaming\npm-cache\bf60fc1f-cache-optimist-0-6-0-package-tgz.lock
+294 silly lockFile bed21ee9-39526-0-8248614827170968-package tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\package
+295 silly lockFile bed21ee9-39526-0-8248614827170968-package tar://D:\Users\axlkq\AppData\Local\Temp\npm-6720\1376919539526-0.8248614827170968\package
+296 silly lockFile bf60fc1f-cache-optimist-0-6-0-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz
+297 silly lockFile bf60fc1f-cache-optimist-0-6-0-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz
+298 silly lockFile fb5a2255-npm-cache-optimist-0-6-0-package D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package
+299 verbose lock D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package D:\Users\axlkq\AppData\Roaming\npm-cache\fb5a2255-npm-cache-optimist-0-6-0-package.lock
+300 silly lockFile fb5a2255-npm-cache-optimist-0-6-0-package D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package
+301 silly lockFile fb5a2255-npm-cache-optimist-0-6-0-package D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package
+302 verbose tar unpack D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz
+303 silly lockFile eb67417d-npm-cache-optimist-0-6-0-package tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package
+304 verbose lock tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package D:\Users\axlkq\AppData\Roaming\npm-cache\eb67417d-npm-cache-optimist-0-6-0-package.lock
+305 silly lockFile bf60fc1f-cache-optimist-0-6-0-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz
+306 verbose lock tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz D:\Users\axlkq\AppData\Roaming\npm-cache\bf60fc1f-cache-optimist-0-6-0-package-tgz.lock
+307 silly gunzTarPerm modes [ '755', '644' ]
+308 silly gunzTarPerm extractEntry package.json
+309 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+310 silly gunzTarPerm extractEntry LICENSE
+311 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+312 silly gunzTarPerm extractEntry index.js
+313 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+314 silly gunzTarPerm extractEntry .travis.yml
+315 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+316 silly gunzTarPerm extractEntry example/bool.js
+317 silly gunzTarPerm modified mode [ 'example/bool.js', 438, 420 ]
+318 silly gunzTarPerm extractEntry example/default_singles.js
+319 silly gunzTarPerm modified mode [ 'example/default_singles.js', 438, 420 ]
+320 silly gunzTarPerm extractEntry example/divide.js
+321 silly gunzTarPerm modified mode [ 'example/divide.js', 438, 420 ]
+322 silly gunzTarPerm extractEntry example/line_count.js
+323 silly gunzTarPerm modified mode [ 'example/line_count.js', 438, 420 ]
+324 silly gunzTarPerm extractEntry example/default_hash.js
+325 silly gunzTarPerm modified mode [ 'example/default_hash.js', 438, 420 ]
+326 silly gunzTarPerm extractEntry example/line_count_wrap.js
+327 silly gunzTarPerm modified mode [ 'example/line_count_wrap.js', 438, 420 ]
+328 silly gunzTarPerm extractEntry example/nonopt.js
+329 silly gunzTarPerm modified mode [ 'example/nonopt.js', 438, 420 ]
+330 silly gunzTarPerm extractEntry example/reflect.js
+331 silly gunzTarPerm modified mode [ 'example/reflect.js', 438, 420 ]
+332 silly gunzTarPerm extractEntry example/short.js
+333 silly gunzTarPerm modified mode [ 'example/short.js', 438, 420 ]
+334 silly gunzTarPerm extractEntry example/string.js
+335 silly gunzTarPerm modified mode [ 'example/string.js', 438, 420 ]
+336 silly gunzTarPerm extractEntry example/boolean_single.js
+337 silly gunzTarPerm modified mode [ 'example/boolean_single.js', 438, 420 ]
+338 silly gunzTarPerm extractEntry example/usage-options.js
+339 silly gunzTarPerm modified mode [ 'example/usage-options.js', 438, 420 ]
+340 silly gunzTarPerm extractEntry example/boolean_double.js
+341 silly gunzTarPerm modified mode [ 'example/boolean_double.js', 438, 420 ]
+342 silly gunzTarPerm extractEntry example/xup.js
+343 silly gunzTarPerm modified mode [ 'example/xup.js', 438, 420 ]
+344 silly gunzTarPerm extractEntry example/line_count_options.js
+345 silly gunzTarPerm modified mode [ 'example/line_count_options.js', 438, 420 ]
+346 silly gunzTarPerm extractEntry readme.markdown
+347 silly gunzTarPerm modified mode [ 'readme.markdown', 438, 420 ]
+348 silly gunzTarPerm extractEntry test/dash.js
+349 silly gunzTarPerm modified mode [ 'test/dash.js', 438, 420 ]
+350 silly gunzTarPerm extractEntry test/parse.js
+351 silly gunzTarPerm modified mode [ 'test/parse.js', 438, 420 ]
+352 silly gunzTarPerm extractEntry test/parse_modified.js
+353 silly gunzTarPerm modified mode [ 'test/parse_modified.js', 438, 420 ]
+354 silly gunzTarPerm extractEntry test/short.js
+355 silly gunzTarPerm modified mode [ 'test/short.js', 438, 420 ]
+356 silly gunzTarPerm extractEntry test/usage.js
+357 silly gunzTarPerm modified mode [ 'test/usage.js', 438, 420 ]
+358 silly gunzTarPerm extractEntry test/whitespace.js
+359 silly gunzTarPerm modified mode [ 'test/whitespace.js', 438, 420 ]
+360 silly gunzTarPerm extractEntry test/_.js
+361 silly gunzTarPerm modified mode [ 'test/_.js', 438, 420 ]
+362 silly gunzTarPerm extractEntry test/_/argv.js
+363 silly gunzTarPerm modified mode [ 'test/_/argv.js', 438, 420 ]
+364 silly gunzTarPerm extractEntry test/_/bin.js
+365 silly gunzTarPerm modified mode [ 'test/_/bin.js', 438, 420 ]
+366 verbose read json D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package\package.json
+367 silly lockFile eb67417d-npm-cache-optimist-0-6-0-package tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package
+368 silly lockFile eb67417d-npm-cache-optimist-0-6-0-package tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package
+369 silly lockFile bf60fc1f-cache-optimist-0-6-0-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz
+370 silly lockFile bf60fc1f-cache-optimist-0-6-0-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz
+371 verbose from cache D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package\package.json
+372 verbose chmod D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz 644
+373 silly chown skipping for windows D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz
+374 silly lockFile 8def609d--org-optimist-optimist-0-6-0-tgz https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz
+375 silly lockFile 8def609d--org-optimist-optimist-0-6-0-tgz https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz
+376 silly lockFile 6403b4d6-optimist-0-6-0 optimist@0.6.0
+377 silly lockFile 6403b4d6-optimist-0-6-0 optimist@0.6.0
+378 silly lockFile 07193858-optimist-0-6-0 optimist@~0.6.0
+379 silly lockFile 07193858-optimist-0-6-0 optimist@~0.6.0
+380 silly resolved [ { name: 'optimist',
+380 silly resolved     version: '0.6.0',
+380 silly resolved     description: 'Light-weight option parsing with an argv hash. No optstrings attached.',
+380 silly resolved     main: './index.js',
+380 silly resolved     dependencies: { wordwrap: '~0.0.2', minimist: '~0.0.1' },
+380 silly resolved     devDependencies: { hashish: '~0.0.4', tap: '~0.4.0' },
+380 silly resolved     scripts: { test: 'tap ./test/*.js' },
+380 silly resolved     repository:
+380 silly resolved      { type: 'git',
+380 silly resolved        url: 'http://github.com/substack/node-optimist.git' },
+380 silly resolved     keywords:
+380 silly resolved      [ 'argument',
+380 silly resolved        'args',
+380 silly resolved        'option',
+380 silly resolved        'parser',
+380 silly resolved        'parsing',
+380 silly resolved        'cli',
+380 silly resolved        'command' ],
+380 silly resolved     author:
+380 silly resolved      { name: 'James Halliday',
+380 silly resolved        email: 'mail@substack.net',
+380 silly resolved        url: 'http://substack.net' },
+380 silly resolved     license: 'MIT/X11',
+380 silly resolved     engine: { node: '>=0.4' },
+380 silly resolved     readme: 'optimist\n========\n\nOptimist is a node.js library for option parsing for people who hate option\nparsing. More specifically, this module is for people who like all the --bells\nand -whistlz of program usage but think optstrings are a waste of time.\n\nWith optimist, option parsing doesn\'t have to suck (as much).\n\n[![build status](https://secure.travis-ci.org/substack/node-optimist.png)](http://travis-ci.org/substack/node-optimist)\n\nexamples\n========\n\nWith Optimist, the options are just a hash! No optstrings attached.\n-------------------------------------------------------------------\n\nxup.js:\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\').argv;\n\nif (argv.rif - 5 * argv.xup > 7.138) {\n    console.log(\'Buy more riffiwobbles\');\n}\nelse {\n    console.log(\'Sell the xupptumblers\');\n}\n````\n\n***\n\n    $ ./xup.js --rif=55 --xup=9.52\n    Buy more riffiwobbles\n    \n    $ ./xup.js --rif 12 --xup 8.1\n    Sell the xupptumblers\n\n![This one\'s optimistic.](http://substack.net/images/optimistic.png)\n\nBut wait! There\'s more! You can do short options:\n-------------------------------------------------\n \nshort.js:\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\').argv;\nconsole.log(\'(%d,%d)\', argv.x, argv.y);\n````\n\n***\n\n    $ ./short.js -x 10 -y 21\n    (10,21)\n\nAnd booleans, both long and short (and grouped):\n----------------------------------\n\nbool.js:\n\n````javascript\n#!/usr/bin/env node\nvar util = require(\'util\');\nvar argv = require(\'optimist\').argv;\n\nif (argv.s) {\n    util.print(argv.fr ? \'Le chat dit: \' : \'The cat says: \');\n}\nconsole.log(\n    (argv.fr ? \'miaou\' : \'meow\') + (argv.p ? \'.\' : \'\')\n);\n````\n\n***\n\n    $ ./bool.js -s\n    The cat says: meow\n    \n    $ ./bool.js -sp\n    The cat says: meow.\n\n    $ ./bool.js -sp --fr\n    Le chat dit: miaou.\n\nAnd non-hypenated options too! Just use `argv._`!\n-------------------------------------------------\n \nnonopt.js:\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\').argv;\nconsole.log(\'(%d,%d)\', argv.x, argv.y);\nconsole.log(argv._);\n````\n\n***\n\n    $ ./nonopt.js -x 6.82 -y 3.35 moo\n    (6.82,3.35)\n    [ \'moo\' ]\n    \n    $ ./nonopt.js foo -x 0.54 bar -y 1.12 baz\n    (0.54,1.12)\n    [ \'foo\', \'bar\', \'baz\' ]\n\nPlus, Optimist comes with .usage() and .demand()!\n-------------------------------------------------\n\ndivide.js:\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\')\n    .usage(\'Usage: $0 -x [num] -y [num]\')\n    .demand([\'x\',\'y\'])\n    .argv;\n\nconsole.log(argv.x / argv.y);\n````\n\n***\n \n    $ ./divide.js -x 55 -y 11\n    5\n    \n    $ node ./divide.js -x 4.91 -z 2.51\n    Usage: node ./divide.js -x [num] -y [num]\n\n    Options:\n      -x  [required]\n      -y  [required]\n\n    Missing required arguments: y\n\nEVEN MORE HOLY COW\n------------------\n\ndefault_singles.js:\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\')\n    .default(\'x\', 10)\n    .default(\'y\', 10)\n    .argv\n;\nconsole.log(argv.x + argv.y);\n````\n\n***\n\n    $ ./default_singles.js -x 5\n    15\n\ndefault_hash.js:\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\')\n    .default({ x : 10, y : 10 })\n    .argv\n;\nconsole.log(argv.x + argv.y);\n````\n\n***\n\n    $ ./default_hash.js -y 7\n    17\n\nAnd if you really want to get all descriptive about it...\n---------------------------------------------------------\n\nboolean_single.js\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\')\n    .boolean(\'v\')\n    .argv\n;\nconsole.dir(argv);\n````\n\n***\n\n    $ ./boolean_single.js -v foo bar baz\n    true\n    [ \'bar\', \'baz\', \'foo\' ]\n\nboolean_double.js\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\')\n    .boolean([\'x\',\'y\',\'z\'])\n    .argv\n;\nconsole.dir([ argv.x, argv.y, argv.z ]);\nconsole.dir(argv._);\n````\n\n***\n\n    $ ./boolean_double.js -x -z one two three\n    [ true, false, true ]\n    [ \'one\', \'two\', \'three\' ]\n\nOptimist is here to help...\n---------------------------\n\nYou can describe parameters for help messages and set aliases. Optimist figures\nout how to format a handy help string automatically.\n\nline_count.js\n\n````javascript\n#!/usr/bin/env node\nvar argv = require(\'optimist\')\n    .usage(\'Count the lines in a file.\\nUsage: $0\')\n    .demand(\'f\')\n    .alias(\'f\', \'file\')\n    .describe(\'f\', \'Load a file\')\n    .argv\n;\n\nvar fs = require(\'fs\');\nvar s = fs.createReadStream(argv.file);\n\nvar lines = 0;\ns.on(\'data\', function (buf) {\n    lines += buf.toString().match(/\\n/g).length;\n});\n\ns.on(\'end\', function () {\n    console.log(lines);\n});\n````\n\n***\n\n    $ node line_count.js\n    Count the lines in a file.\n    Usage: node ./line_count.js\n\n    Options:\n      -f, --file  Load a file  [required]\n\n    Missing required arguments: f\n\n    $ node line_count.js --file line_count.js \n    20\n    \n    $ node line_count.js -f line_count.js \n    20\n\nmethods\n=======\n\nBy itself,\n\n````javascript\nrequire(\'optimist\').argv\n`````\n\nwill use `process.argv` array to construct the `argv` object.\n\nYou can pass in the `process.argv` yourself:\n\n````javascript\nrequire(\'optimist\')([ \'-x\', \'1\', \'-y\', \'2\' ]).argv\n````\n\nor use .parse() to do the same thing:\n\n````javascript\nrequire(\'optimist\').parse([ \'-x\', \'1\', \'-y\', \'2\' ])\n````\n\nThe rest of these methods below come in just before the terminating `.argv`.\n\n.alias(key, alias)\n------------------\n\nSet key names as equivalent such that updates to a key will propagate to aliases\nand vice-versa.\n\nOptionally `.alias()` can take an object that maps keys to aliases.\n\n.default(key, value)\n--------------------\n\nSet `argv[key]` to `value` if no option was specified on `process.argv`.\n\nOptionally `.default()` can take an object that maps keys to default values.\n\n.demand(key)\n------------\n\nIf `key` is a string, show the usage information and exit if `key` wasn\'t\nspecified in `process.argv`.\n\nIf `key` is a number, demand at least as many non-option arguments, which show\nup in `argv._`.\n\nIf `key` is an Array, demand each element.\n\n.describe(key, desc)\n--------------------\n\nDescribe a `key` for the generated usage information.\n\nOptionally `.describe()` can take an object that maps keys to descriptions.\n\n.options(key, opt)\n------------------\n\nInstead of chaining together `.alias().demand().default()`, you can specify\nkeys in `opt` for each of the chainable methods.\n\nFor example:\n\n````javascript\nvar argv = require(\'optimist\')\n    .options(\'f\', {\n        alias : \'file\',\n        default : \'/etc/passwd\',\n    })\n    .argv\n;\n````\n\nis the same as\n\n````javascript\nvar argv = require(\'optimist\')\n    .alias(\'f\', \'file\')\n    .default(\'f\', \'/etc/passwd\')\n    .argv\n;\n````\n\nOptionally `.options()` can take an object that maps keys to `opt` parameters.\n\n.usage(message)\n---------------\n\nSet a usage message to show which commands to use. Inside `message`, the string\n`$0` will get interpolated to the current script name or node command for the\npresent script similar to how `$0` works in bash or perl.\n\n.check(fn)\n----------\n\nCheck that certain conditions are met in the provided arguments.\n\nIf `fn` throws or returns `false`, show the thrown error, usage information, and\nexit.\n\n.boolean(key)\n-------------\n\nInterpret `key` as a boolean. If a non-flag option follows `key` in\n`process.argv`, that string won\'t get set as the value of `key`.\n\nIf `key` never shows up as a flag in `process.arguments`, `argv[key]` will be\n`false`.\n\nIf `key` is an Array, interpret all the elements as booleans.\n\n.string(key)\n------------\n\nTell the parser logic not to interpret `key` as a number or boolean.\nThis can be useful if you need to preserve leading zeros in an input.\n\nIf `key` is an Array, interpret all the elements as strings.\n\n.wrap(columns)\n--------------\n\nFormat usage output to wrap at `columns` many columns.\n\n.help()\n-------\n\nReturn the generated usage string.\n\n.showHelp(fn=console.error)\n---------------------------\n\nPrint the usage data using `fn` for printing.\n\n.parse(args)\n------------\n\nParse `args` instead of `process.argv`. Returns the `argv` object.\n\n.argv\n-----\n\nGet the arguments as a plain old object.\n\nArguments without a corresponding flag show up in the `argv._` array.\n\nThe script name or node command is available at `argv.$0` similarly to how `$0`\nworks in bash or perl.\n\nparsing tricks\n==============\n\nstop parsing\n------------\n\nUse `--` to stop parsing flags and stuff the remainder into `argv._`.\n\n    $ node examples/reflect.js -a 1 -b 2 -- -c 3 -d 4\n    { _: [ \'-c\', \'3\', \'-d\', \'4\' ],\n      \'$0\': \'node ./examples/reflect.js\',\n      a: 1,\n      b: 2 }\n\nnegate fields\n-------------\n\nIf you want to explicity set a field to false instead of just leaving it\nundefined or to override a default you can do `--no-key`.\n\n    $ node examples/reflect.js -a --no-b\n    { _: [],\n      \'$0\': \'node ./examples/reflect.js\',\n      a: true,\n      b: false }\n\nnumbers\n-------\n\nEvery argument that looks like a number (`!isNaN(Number(arg))`) is converted to\none. This way you can just `net.createConnection(argv.port)` and you can add\nnumbers out of `argv` with `+` without having that mean concatenation,\nwhich is super frustrating.\n\nduplicates\n----------\n\nIf you specify a flag multiple times it will get turned into an array containing\nall the values in order.\n\n    $ node examples/reflect.js -x 5 -x 8 -x 0\n    { _: [],\n      \'$0\': \'node ./examples/reflect.js\',\n        x: [ 5, 8, 0 ] }\n\ndot notation\n------------\n\nWhen you use dots (`.`s) in argument names, an implicit object path is assumed.\nThis lets you organize arguments into nested objects.\n\n     $ node examples/reflect.js --foo.bar.baz=33 --foo.quux=5\n     { _: [],\n       \'$0\': \'node ./examples/reflect.js\',\n         foo: { bar: { baz: 33 }, quux: 5 } }\n\nshort numbers\n-------------\n\nShort numeric `head -n5` style argument work too:\n\n    $ node reflect.js -n123 -m456\n    { \'3\': true,\n      \'6\': true,\n      _: [],\n      \'$0\': \'node ./reflect.js\',\n      n: 123,\n      m: 456 }\n\ninstallation\n============\n\nWith [npm](http://github.com/isaacs/npm), just do:\n    npm install optimist\n \nor clone this project on github:\n\n    git clone http://github.com/substack/node-optimist.git\n\nTo run the tests with [expresso](http://github.com/visionmedia/expresso),\njust do:\n    \n    expresso\n\ninspired By\n===========\n\nThis module is loosely inspired by Perl\'s\n[Getopt::Casual](http://search.cpan.org/~photo/Getopt-Casual-0.13.1/Casual.pm).\n',
+380 silly resolved     readmeFilename: 'readme.markdown',
+380 silly resolved     bugs: { url: 'https://github.com/substack/node-optimist/issues' },
+380 silly resolved     _id: 'optimist@0.6.0',
+380 silly resolved     dist: { shasum: '3ab4c14fc635e23d3bc315bcd3da3502a082a9e4' },
+380 silly resolved     _from: 'optimist@~0.6.0',
+380 silly resolved     _resolved: 'https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz' } ]
+381 info install optimist@0.6.0 into D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma
+382 info installOne optimist@0.6.0
+383 verbose from cache D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package\package.json
+384 info D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma\node_modules\optimist unbuild
+385 verbose read json D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma\node_modules\optimist\package.json
+386 verbose tar unpack D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz
+387 silly lockFile 444fc354-runt-karma-node-modules-optimist tar://D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma\node_modules\optimist
+388 verbose lock tar://D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma\node_modules\optimist D:\Users\axlkq\AppData\Roaming\npm-cache\444fc354-runt-karma-node-modules-optimist.lock
+389 silly lockFile bf60fc1f-cache-optimist-0-6-0-package-tgz tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz
+390 verbose lock tar://D:\Users\axlkq\AppData\Roaming\npm-cache\optimist\0.6.0\package.tgz D:\Users\axlkq\AppData\Roaming\npm-cache\bf60fc1f-cache-optimist-0-6-0-package-tgz.lock
+391 silly gunzTarPerm modes [ '755', '644' ]
+392 silly gunzTarPerm extractEntry package.json
+393 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+394 silly gunzTarPerm extractEntry LICENSE
+395 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+396 silly gunzTarPerm extractEntry index.js
+397 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+398 silly gunzTarPerm extractEntry .travis.yml
+399 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+400 silly gunzTarPerm extractEntry example/bool.js
+401 silly gunzTarPerm modified mode [ 'example/bool.js', 438, 420 ]
+402 silly gunzTarPerm extractEntry example/default_singles.js
+403 silly gunzTarPerm modified mode [ 'example/default_singles.js', 438, 420 ]
+404 silly gunzTarPerm extractEntry example/divide.js
+405 silly gunzTarPerm modified mode [ 'example/divide.js', 438, 420 ]
+406 silly gunzTarPerm extractEntry example/line_count.js
+407 silly gunzTarPerm modified mode [ 'example/line_count.js', 438, 420 ]
+408 silly gunzTarPerm extractEntry example/default_hash.js
+409 silly gunzTarPerm modified mode [ 'example/default_hash.js', 438, 420 ]
+410 silly gunzTarPerm extractEntry example/line_count_wrap.js
+411 silly gunzTarPerm modified mode [ 'example/line_count_wrap.js', 438, 420 ]
+412 silly gunzTarPerm extractEntry example/nonopt.js
+413 silly gunzTarPerm modified mode [ 'example/nonopt.js', 438, 420 ]
+414 silly gunzTarPerm extractEntry example/reflect.js
+415 silly gunzTarPerm modified mode [ 'example/reflect.js', 438, 420 ]
+416 silly gunzTarPerm extractEntry example/short.js
+417 silly gunzTarPerm modified mode [ 'example/short.js', 438, 420 ]
+418 silly gunzTarPerm extractEntry example/string.js
+419 silly gunzTarPerm modified mode [ 'example/string.js', 438, 420 ]
+420 silly gunzTarPerm extractEntry example/boolean_single.js
+421 silly gunzTarPerm modified mode [ 'example/boolean_single.js', 438, 420 ]
+422 silly gunzTarPerm extractEntry example/usage-options.js
+423 silly gunzTarPerm modified mode [ 'example/usage-options.js', 438, 420 ]
+424 silly gunzTarPerm extractEntry example/boolean_double.js
+425 silly gunzTarPerm modified mode [ 'example/boolean_double.js', 438, 420 ]
+426 silly gunzTarPerm extractEntry example/xup.js
+427 silly gunzTarPerm modified mode [ 'example/xup.js', 438, 420 ]
+428 silly gunzTarPerm extractEntry example/line_count_options.js
+429 silly gunzTarPerm modified mode [ 'example/line_count_options.js', 438, 420 ]
+430 silly gunzTarPerm extractEntry readme.markdown
+431 silly gunzTarPerm modified mode [ 'readme.markdown', 438, 420 ]
+432 silly gunzTarPerm extractEntry test/dash.js
+433 silly gunzTarPerm modified mode [ 'test/dash.js', 438, 420 ]
+434 silly gunzTarPerm extractEntry test/parse.js
+435 silly gunzTarPerm modified mode [ 'test/parse.js', 438, 420 ]
+436 silly gunzTarPerm extractEntry test/parse_modified.js
+437 silly gunzTarPerm modified mode [ 'test/parse_modified.js', 438, 420 ]
+438 silly gunzTarPerm extractEntry test/short.js
+439 silly gunzTarPerm modified mode [ 'test/short.js', 438, 420 ]
+440 silly gunzTarPerm extractEntry test/usage.js
+441 silly gunzTarPerm modified mode [ 'test/usage.js', 438, 420 ]
+442 silly gunzTarPerm extractEntry test/whitespace.js
+443 silly gunzTarPerm modified mode [ 'test/whitespace.js', 438, 420 ]
+444 silly gunzTarPerm extractEntry test/_.js
+445 silly gunzTarPerm modified mode [ 'test/_.js', 438, 420 ]
+446 silly gunzTarPerm extractEntry test/_/argv.js
+447 silly gunzTarPerm modified mode [ 'test/_/argv.js', 438, 420 ]
+448 silly gunzTarPerm extractEntry test/_/bin.js
+449 silly gunzTarPerm modified mode [ 'test/_/bin.js', 438, 420 ]
+450 error Error: ENOENT, lstat 'D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma\node_modules\optimist\example\default_singles.js'
+451 error If you need help, you may report this log at:
+451 error     <http://github.com/isaacs/npm/issues>
+451 error or email it to:
+451 error     <npm-@googlegroups.com>
+452 error System Windows_NT 6.1.7601
+453 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "grunt-karma" "--save"
+454 error cwd D:\Users\axlkq\Documents\GitHub\dicomweb
+455 error node -v v0.10.12
+456 error npm -v 1.2.32
+457 error path D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma\node_modules\optimist\example\default_singles.js
+458 error fstream_path D:\Users\axlkq\Documents\GitHub\dicomweb\node_modules\grunt-karma\node_modules\optimist\example\default_singles.js
+459 error fstream_type File
+460 error fstream_class FileWriter
+461 error code ENOENT
+462 error errno 34
+463 error fstream_stack C:\Program Files\nodejs\node_modules\npm\node_modules\fstream\lib\writer.js:284:26
+463 error fstream_stack Object.oncomplete (fs.js:107:15)
+464 verbose exit [ 34, true ]

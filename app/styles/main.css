@@ -20,13 +20,59 @@ body {
     font-size: 20px;
 }
 
-.restget {
+.restoperation {
     float: none;
     clear: both;
     overflow: hidden;
     display: block;
     margin: 0 0 10px;
     padding: 0;
+}
+
+.restget > .restheading {
+    background-color: #e7f0f7;
+    border: 1px solid #c3d9ec;
+
+}
+
+.restget > .restcontent {
+    background-color: #e7f0f7;
+    border: 1px solid #c3d9ec;
+
+}
+
+.restget > .restheading > h3 > .resthttp_method {
+    background-color: #0f6ab4;
+}
+
+.restpost > .restheading {
+    background-color: #e7f6ec;
+    border: 1px solid #c3e8d1;
+
+}
+
+.restpost > .restcontent {
+    background-color: #e7f6ec;
+    border: 1px solid #c3e8d1;
+}
+
+.restpost > .restheading > h3 > .resthttp_method {
+    background-color: #10a54a;
+}
+
+.restput > .restheading {
+    background-color: #f9f2e9;
+    border: 1px solid #f0e0ca;
+
+}
+
+.restput > .restcontent {
+    background-color: #f9f2e9;
+    border: 1px solid #f0e0ca;
+}
+
+.restput > .restheading > h3 >  .resthttp_method {
+    background-color: #c5862b;
 }
 
 .restheading {
@@ -36,37 +82,36 @@ body {
     display: block;
     margin: 0;
     padding: 0;
-    background-color: #e7f0f7;
-    border: 1px solid #c3d9ec;
     cursor: pointer;
 }
+
+
 .restheading h3 {
     display: block;
-clear: none;
-float: left;
-width: auto;
-margin: 0;
-padding: 0;
-line-height: 1.1em;
-color: black;
+    clear: none;
+    float: left;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    line-height: 1.1em;
+    color: black;
 }
 
 .resthttp_method {
     text-transform: uppercase;
-background-color: #0f6ab4;
-text-decoration: none;
-color: white;
-display: inline-block;
-width: 50px;
-font-size: 0.7em;
-text-align: center;
-padding: 7px 0 4px 0;
--moz-border-radius: 2px;
--webkit-border-radius: 2px;
--o-border-radius: 2px;
--ms-border-radius: 2px;
--khtml-border-radius: 2px;
-border-radius: 2px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 50px;
+    font-size: 0.7em;
+    text-align: center;
+    padding: 7px 0 4px 0;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
 }
 
 .restpath {
@@ -74,79 +119,77 @@ border-radius: 2px;
 }
 
 .restoptions {
-overflow: hidden;
-padding: 0;
-display: block;
-clear: none;
-float: right;
-margin: 6px 10px 0 0;
-list-style: none;
+    overflow: hidden;
+    padding: 0;
+    display: block;
+    clear: none;
+    float: right;
+    margin: 6px 10px 0 0;
+    list-style: none;
 }
 .restoptions li {
-padding-right: 0;
-border-right: none;
-color: #0f6ab4;
-font-size: 0.9em;
-float: left;
-clear: none;
-margin: 0;
-padding: 2px 10px;
+    padding-right: 0;
+    border-right: none;
+    color: #0f6ab4;
+    font-size: 0.9em;
+    float: left;
+    clear: none;
+    margin: 0;
+    padding: 2px 10px;
 }
 
 .restcontent {
-background-color: #ebf3f9;
-border: 1px solid #c3d9ec;
-border-top: none;
-padding: 10px;    
-moz-border-radius-bottomleft: 6px;
--webkit-border-bottom-left-radius: 6px;
--o-border-bottom-left-radius: 6px;
--ms-border-bottom-left-radius: 6px;
--khtml-border-bottom-left-radius: 6px;
-border-bottom-left-radius: 6px;
--moz-border-radius-bottomright: 6px;
--webkit-border-bottom-right-radius: 6px;
--o-border-bottom-right-radius: 6px;
--ms-border-bottom-right-radius: 6px;
--khtml-border-bottom-right-radius: 6px;
-border-bottom-right-radius: 6px;
-margin: 0 0 20px;
-display: none;
+    border-top: none;
+    padding: 10px;    
+    moz-border-radius-bottomleft: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -o-border-bottom-left-radius: 6px;
+    -ms-border-bottom-left-radius: 6px;
+    -khtml-border-bottom-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -o-border-bottom-right-radius: 6px;
+    -ms-border-bottom-right-radius: 6px;
+    -khtml-border-bottom-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin: 0 0 20px;
+    display: none;
 }
 
 .restcontent h4 {
     color: #0f6ab4;
-font-size: 1.1em;
-margin: 0;
-padding: 15px 0 5px;
+    font-size: 1.1em;
+    margin: 0;
+    padding: 15px 0 5px;
 }
 
 .resttable {
     width: 100%;
-border-collapse: collapse;
-border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 .resttable thead tr th {
-padding: 5px;
-font-size: 0.9em;
-color: #666666;
-border-bottom: 1px solid #999999;
-text-align: left;
-font-weight: normal;
-vertical-align: middle;
+    padding: 5px;
+    font-size: 0.9em;
+    color: #666666;
+    border-bottom: 1px solid #999999;
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
 }
 
 .resttable tbody tr:last-child td {
-border-bottom: none;
+    border-bottom: none;
 }
 
 .resttable tbody tr td {
     padding: 6px;
-font-size: 0.9em;
-border-bottom: 1px solid #cccccc;
-vertical-align: top;
-line-height: 1.3em;
+    font-size: 0.9em;
+    border-bottom: 1px solid #cccccc;
+    vertical-align: top;
+    line-height: 1.3em;
 }
 
 .restrequired {

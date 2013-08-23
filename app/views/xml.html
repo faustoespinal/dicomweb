@@ -7,75 +7,65 @@
 			Native Model in <a href="ftp://medical.nema.org/medical/dicom/2011/11_18pu.pdf" target="_blank">PS 3.18</a>.
 		</p>
 		<pre>
-<?xml version="1.0" encoding="UTF-8"?>
-<NativeDicomModel xmlns="http://dicom.nema.org/PS3.19/models/NativeDICOM" 
-772 xsi:schemaLocation="http://dicom.nema.org/PS3.19/models/NativeDICOM
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-774
-<DicomAttribute tag="00081198" vr="SQ" keyword="FailedSOPSequence">
-776 <Item number="1">
-<DicomAttribute tag="00081150" vr="UI" keyword="ReferencedSOPClassUID">
-778 <Value number="1">1.2.840.10008.3.1.2.3.1</Value>
-</DicomAttribute>
-780 <DicomAttribute tag="00081155" vr="UI" keyword="ReferencedSOPInstanceUID">Supplement 163: STore Over the Web by REpresentational State Transfer (REST) Services (STOW-RS)
-Page 25
-<Value number="1">2.16.124.113543.6003.1011758472.49886.19426.2085542308</Value>
-782 </DicomAttribute>
-<DicomAttribute tag="00081197" vr="US" keyword="FailureReason">
-784 <Value number="1">290</Value>
-</DicomAttribute>
-786 </Item>
-<Item number="2">
-788 <DicomAttribute tag="00081150" vr="UI" keyword="ReferencedSOPClassUID">
-<Value number="1">1.2.840.10008.3.1.2.3.1</Value>
-790 </DicomAttribute>
-<DicomAttribute tag="00081155" vr="UI" keyword="ReferencedSOPInstanceUID">
-792 <Value number="1">2.16.124.113543.6003.1011758472.49886.19426.2085542309</Value>
-</DicomAttribute>
-794 <DicomAttribute tag="00081197" vr="US" keyword="FailureReason">
-<Value number="1">290</Value>
-796 </DicomAttribute>
-</Item>
-798 </DicomAttribute>
-800 <DicomAttribute tag="00081199" vr="SQ" keyword="ReferencedSOPSequence">
-<Item number="1">
-802 <DicomAttribute tag="00081150" vr="UI" keyword="ReferencedSOPClassUID">
-<Value number="1">1.2.840.10008.5.1.4.1.1.2</Value>
-804 </DicomAttribute>
-<DicomAttribute tag="00081155" vr="UI" keyword="ReferencedSOPInstanceUID">
-806 <Value number="1">2.16.124.113543.6003.189642796.63084.16748.2599092903</Value>
-</DicomAttribute>
-808 <DicomAttribute tag="00081190" vr="UT" keyword="RetrieveURL">
-<Value 
-810 number="1">https://wadors.hospital.com/studies/2.16.124.113543.6003.1154777499.30246.19789.3503
-430045/series/2.16.124.113543.6003.2588828330.45298.17418.2723805630/instances/2.16.124.113543.
-812 6003.189642796.63084.16748.2599092903</Value>
-</DicomAttribute>
-814 </Item>
-<Item number="2">
-816 <DicomAttribute tag="00081150" vr="UI" keyword="ReferencedSOPClassUID">
-<Value number="1">1.2.840.10008.5.1.4.1.1.2</Value>
-818 </DicomAttribute>
-<DicomAttribute tag="00081155" vr="UI" keyword="ReferencedSOPInstanceUID">
-820 <Value number="1">2.16.124.113543.6003.189642796.63084.16748.2599092905</Value>
-</DicomAttribute>
-822 <DicomAttribute tag="00081196" vr="US" keyword="WarningReason">
-<Value number="1">45056</Value>
-824 </DicomAttribute> 
-<DicomAttribute tag="00081190" vr="UT" keyword="RetrieveURL">
-826 <Value 
-number="1">https://wadors.hospital.com/studies/2.16.124.113543.6003.1154777499.30246.19789.3503
-828 430045/series/2.16.124.113543.6003.2588828330.45298.17418.2723805630/instances/2.16.124.113543.
-6003.189642796.63084.16748.2599092905</Value>
-830 </DicomAttribute>
-</Item>
-832 </DicomAttribute>
-834 <DicomAttribute tag="00081190" vr="UT" keyword="RetrieveURL">
-<Value 
-836 number="1">https://wadors.hospital.com/studies/2.16.124.113543.6003.1154777499.30246.19789.3503
-430045</Value>
-838 </DicomAttribute>
-840 </NativeDicomModel>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;NativeDicomModel&gt;
+	&lt;DicomAttribute Tag="00080020" VR="DT" Keyword="StudyDate"&gt;
+		&lt;Value number="1"&gt;20130409&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00080030" VR="TM" Keyword="StudyTime"&gt;
+		&lt;Value number="1"&gt;131600.0000&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00080050" VR="CS" Keyword="AccessionNumber"&gt;
+		&lt;Value number="1"&gt;11235813&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00080056" VR="CS" Keyword="InstanceAvailability"&gt;
+		&lt;Value number="1"ONLINE&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00080061" VR="CS" Keyword="ModalitiesInStudy"&gt;
+		&lt;Value number="1"&gt;CT&lt;/value&gt;
+		&lt;Value number="2"&gt;PET&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00080090" VR="PN" Keyword="ReferringPhysiciansName"&gt;
+		&lt;PersonName number="1"&gt;
+			&lt;SingleByte&gt;
+				&lt;FamilyName&gt;B&lt;/FamilyName&gt; 
+				&lt;GivenName&gt;Smith&lt;/GivenName&gt;
+			&lt;/SingleByte&gt;
+		&lt;/PersonName&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00100010" VR="PN" Keyword="PatientName"&gt;
+		&lt;PersonName number="1"&gt;
+			&lt;SingleByte&gt;
+				&lt;FamilyName&gt;Wang&lt;/FamilyName&gt; 
+				&lt;GivenName&gt;XiaoDong&lt;/GivenName&gt;
+				&lt;MiddleName&gt;SB3&lt;/MiddleName&gt;
+				&lt;NamePrefix&gt;SB4&lt;/NamePrefix&gt;
+				&lt;NameSuffix&gt;SB5&lt;/NameSuffix&gt;
+			&lt;/SingleByte&gt;
+			&lt;Ideographic&gt;
+				&lt;FamilyName&gt;王^小東&lt;/FamilyName&gt; 
+			&lt;/Ideographic&gt;
+		&lt;/PersonName&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00100020" VR="CS" Keyword="PatientID"&gt;
+		&lt;Value number="1"&gt;12345&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00100021" VR="CS" Keyword="IssuerOfPatientID"&gt;
+		&lt;Value number="1"&gt;HospitalA&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00100030" VR="DT" Keyword="PatientsBirthDate"&gt;
+		&lt;Value number="1"&gt;19670701&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00100040" VR="CS" Keyword="PatientsSex"&gt;
+		&lt;Value number="1"&gt;MALE&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00200010" VR="SH" Keyword="StudyID"&gt;
+		&lt;Value number="1"&gt;11235813&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="0020000D" VR="UI" Keyword="StudyInstanceUID"&gt;
+		&lt;Value number="1"&gt;1.2.392.200036.9116.2.2.2.1762893313.1029997326.945873&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+&lt;/NativeDicomModel&gt;
 		</pre>
 	</div>
 </div>

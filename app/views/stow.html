@@ -103,7 +103,7 @@
 					</thead>
 					<tbody class="operation-params">
 						<tr>
-							<td class="code required">Accept</td>
+							<td class="code required">Content-Type</td>
 							<td>The representation scheme being posted to the RESTful service.</td>
 							<td>
 								multipart/related; type=application/dicom; boundary={messageBoundary}<br />
@@ -114,6 +114,12 @@
 				</table>				
 			</div>
 		</div>
-
+		<h3>Unique Identifiers</h3>
+		<p>
+			As part of generating content, you will need to provide unique identifiers, for study, series, and SOP instance UID fields. More information regarding unique identifiers can be found in section 9 and annex B in <a href="http://medical.nema.org/Dicom/2011/11_05pu.pdf">PS 3.5</a>. To generate a UID using standard UUID generation, you can follow the rules of OID generation described <a href="http://www.itu.int/ITU-T/asn1/uuid.html">here</a>, where by each identifier can be 2.25.&lt;aaaa&gt;, where &lt;aaaa&gt; is the decimal notation without hyphens or other separator notation.
+		</p>
+		<h3>SOP Class</h3>
+		<p>
+			When uploading content, you will need to specify the SOP Class. This indicates the type of content being embedded inside the DICOM instance. A lossy JPEG SOP class uses the ID, "1.2.840.10008.1.2.4.50". Other types are defined in Annex A of <a href="http://medical.nema.org/Dicom/2011/11_06pu.pdf">PS 3.6</a>.
 	</div>
 </div>

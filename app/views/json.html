@@ -3,372 +3,202 @@
 
 		<h1>JSON</h1>
 		<p>
-			Following is an example of DICOM JSON Model, which is not yet an approved part of the DICOM standard. You can find more information about the DICOM 
-			JSON Model in the <a href="ftp://medical.nema.org/medical/dicom/supps/PC/sup166_pc.pdf">QIDO supplement</a>.
+			Following is an example of DICOM JSON Model. Note, that when in a query (QIDO-RS) response, you will get an array of the object shown below.More information about the DICOM JSON Model in the <a href="ftp://medical.nema.org/medical/dicom/supps/PC/sup166_pc.pdf">QIDO-RS supplement</a>.
 		</p>
+        <h3>Attribute Names</h3>
+        <p>
+            The JSON tag names are based on the hexadecimal identifier in DICOM. There is a JSON-based object lookup reference available at <a href="dicom.json">here</a> - by including that file in your implementation, you will be able to reference tags by simple english names, as follows: 
+            <pre>
+result[dicom.PatientName]</pre>
+        </p>
+        <p>You can also use a reference site like <a href="http://www.dicomtags.com/">DICOMtags.com</a> to find the specific tags you need.</p>
+        <h3>Child Attributes</h3>
+        <ul>
+            <li>
+                The "vr" (value representation) attribute describes the value type. Some of the more common types include CS (code string), PN, (person's name), and DT (Date/Time, in YYYYMMDD). See section 6.2 of <a href="http://medical.nema.org/Dicom/2011/11_05pu.pdf">DICOM PS 3.5</a> for additional details.
+            </li>
+            <li>
+                The "Value" attribute is typically where data can be found. Person names and binary data are exceptions to this. Value, when present, is always an array. If the value is null, it is entirely omitted.
+            </li>
+        </ul>
+        <h2>Example</h2>
 		<pre>
-[
-    {
-        "SpecificCharacterSet": {
-            "Tag": "00080005",
-            "VR": "CS",
-            "Value": [
-                "ISO_IR192"
-            ]
-        },
-        "StudyDate": {
-            "Tag": "00080020",
-            "VR": "DT",
-            "Value": [
-                "20130409"
-            ]
-        },
-        "StudyTime": {
-            "Tag": "00080030",
-            "VR": "TM",
-            "Value": [
-                "131600.0000"
-            ]
-        },
-        "AccessionNumber": {
-            "Tag": "00080050",
-            "VR": "SH",
-            "Value": [
-                "11235813"
-            ]
-        },
-        "InstanceAvailability": {
-            "Tag": "00080056",
-            "VR": "CS",
-            "Value": [
-                "ONLINE"
-            ]
-        },
-        "ModalitiesInStudy": {
-            "Tag": "00080061",
-            "VR": "CS",
-            "Value": [
-                "CT",
-                "PET"
-            ]
-        },
-        "ReferringPhysiciansName": {
-            "Tag": "00080090",
-            "VR": "PN",
-            "PersonName": [
-                {
-                    "SingleByte": "^Bob^^Dr."
-                }
-            ]
-        },
-        "00090010": {
-            "Tag": "00090010",
-            "VR": "LO",
-            "Value": [
-                "Vendor A"
-            ]
-        },
-        "00091002": {
-            "Tag": "00091002",
-            "VR": "UN",
-            "PrivateCreator": "Vendor A",
-            "Value": [
-                "z0x9c8v7"
-            ]
-        },
-        "PatientName": {
-            "Tag": "00100010",
-            "VR": "PN",
-            "PersonName": [
-                {
-                    "SingleByte": "Wang^XiaoDong",
-                    "Ideographic": "王^小東"
-                }
-            ]
-        },
-        "PatientID": {
-            "Tag": "00100020",
-            "VR": "LO",
-            "Value": [
-                "12345"
-            ]
-        },
-        "IssuerOfPatientID": {
-            "Tag": "00100021",
-            "VR": "LO",
-            "Value": [
-                "Hospital A"
-            ]
-        },
-        "PatientsBirthDate": {
-            "Tag": "00100030",
-            "VR": "DT",
-            "Value": [
-                "19670701"
-            ]
-        },
-        "PatientsSex": {
-            "Tag": "00100040",
-            "VR": "CS",
-            "Value": [
-                "M"
-            ]
-        },
-        "OtherPatientIDsSequence": {
-            "Tag": "00101002",
-            "VR": "SQ",
-            "Sequence": [
-                {
-                    "PatientID": {
-                        "Tag": "00100020",
-                        "VR": "LO",
-                        "Value": [
-                            "54321"
-                        ]
-                    },
-                    "IssuerOfPatientID": {
-                        "Tag": "00100021",
-                        "VR": "LO",
-                        "Value": [
-                            "Hospital B"
-                        ]
-                    }
-                },
-                {
-                    "PatientID": {
-                        "Tag": "00100020",
-                        "VR": "LO",
-                        "Value": [
-                            "24680"
-                        ]
-                    },
-                    "IssuerOfPatientID": {
-                        "Tag": "00100021",
-                        "VR": "LO",
-                        "Value": [
-                            "Hospital C"
-                        ]
-                    }
-                }
-            ]
-        },
-        "StudyID": {
-            "Tag": "00200010",
-            "VR": "SH",
-            "Value": [
-                "11235813"
-            ]
-        },
-        "StudyInstanceUID": {
-            "Tag": "0020000D",
-            "VR": "UI",
-            "Value": [
-                "1.2.392.200036.9116.2.2.2.1762893313.1029997326.945873"
-            ]
-        },
-        "NumberOfStudyRelatedSeries": {
-            "Tag": "00201206",
-            "VR": "IS",
-            "Value": [
-                "4"
-            ]
-        },
-        "NumberOfStudyRelatedInstances": {
-            "Tag": "00201208",
-            "VR": "IS",
-            "Value": [
-                "942"
-            ]
-        },
-        "RetrieveURL": {
-            "Tag": "00081190",
-            "VR": "UT",
-            "Value": [
-                "http://wado.nema.org/studies/1.2.392.200036.9116.2.2.2.1762893313.1029997326.945873"
-            ]
-        }
+{
+    "00080005": {
+        "vr": "CS",
+        "Value": [
+            "ISO_IR192"
+        ]
     },
-    {
-        "SpecificCharacterSet": {
-            "Tag": "00080005",
-            "VR": "CS",
-            "Value": [
-                "ISO_IR192"
-            ]
-        },
-        "StudyDate": {
-            "Tag": "00080020",
-            "VR": "DT",
-            "Value": [
-                "20130309"
-            ]
-        },
-        "StudyTime": {
-            "Tag": "00080030",
-            "VR": "TM",
-            "Value": [
-                "111900.0000"
-            ]
-        },
-        "AccessionNumber": {
-            "Tag": "00080050",
-            "VR": "SH",
-            "Value": [
-                "11235821"
-            ]
-        },
-        "InstanceAvailability": {
-            "Tag": "00080056",
-            "VR": "CS",
-            "Value": [
-                "ONLINE"
-            ]
-        },
-        "ModalitiesInStudy": {
-            "Tag": "00080061",
-            "VR": "CS",
-            "Value": [
-                "CT",
-                "PET"
-            ]
-        },
-        "ReferringPhysiciansName": {
-            "Tag": "00080090",
-            "VR": "PN",
-            "PersonName": [
-                {
-                    "SingleByte": "^Bob^^Dr."
+    "00080020": {
+        "vr": "DT",
+        "Value": [
+            "20130409"
+        ]
+    },
+    "00080030": {
+        "vr": "TM",
+        "Value": [
+            "131600.0000"
+        ]
+    },
+    "00080050": {
+        "vr": "SH",
+        "Value": [
+            "11235813"
+        ]
+    },
+    "00080056": {
+        "vr": "CS",
+        "Value": [
+            "ONLINE"
+        ]
+    },
+    "00080061": {
+        "vr": "CS",
+        "Value": [
+            "CT",
+            "PET"
+        ]
+    },
+    "00080090": {
+        "vr": "PN",
+        "Value": [
+            {
+                "Alphabetic": {
+                    "Given": [
+                        "Bob"
+                    ],
+                    "Suffix": [
+                        "Dr."
+                    ]
                 }
-            ]
-        },
-        "00090010": {
-            "Tag": "00090010",
-            "VR": "LO",
-            "Value": [
-                "Vendor A"
-            ]
-        },
-        "00091002": {
-            "Tag": "00091002",
-            "VR": "UN",
-            "PrivateCreator": "Modality Vendor A",
-            "Value": [
-                "z0x9c8v7"
-            ]
-        },
-        "PatientName": {
-            "Tag": "00100010",
-            "VR": "PN",
-            "PersonName": [
-                {
-                    "SingleByte": "Wang^XiaoDong",
-                    "Ideographic": "王^小東"
-                }
-            ]
-        },
-        "PatientID": {
-            "Tag": "00100020",
-            "VR": "LO",
-            "Value": [
-                "12345"
-            ]
-        },
-        "IssuerOfPatientID": {
-            "Tag": "00100021",
-            "VR": "LO",
-            "Value": [
-                "Hospital A"
-            ]
-        },
-        "PatientsBirthDate": {
-            "Tag": "00100030",
-            "VR": "DT",
-            "Value": [
-                "19670701"
-            ]
-        },
-        "PatientsSex": {
-            "Tag": "00100040",
-            "VR": "CS",
-            "Value": [
-                "M"
-            ]
-        },
-        "OtherPatientIDsSequence": {
-            "Tag": "00101002",
-            "VR": "SQ",
-            "Sequence": [
-                {
-                    "PatientID": {
-                        "Tag": "00100020",
-                        "VR": "LO",
-                        "Value": [
-                            "54321"
-                        ]
-                    },
-                    "IssuerOfPatientID": {
-                        "Tag": "00100021",
-                        "VR": "LO",
-                        "Value": [
-                            "Hospital B"
-                        ]
-                    }
+            }
+        ]
+    },
+    "00081190": {
+        "vr": "UT",
+        "Value": [
+            "http://wado.nema.org/studies/1.2.392.200036.9116.2.2.2.1762893313.1029997326.945873"
+        ]
+    },
+    "00090010": {
+        "vr": "LO",
+        "Value": [
+            "Vendor A"
+        ]
+    },
+    "00091002": {
+        "vr": "UN",
+        "Value": [
+            "z0x9c8v7"
+        ]
+    },
+    "00100010": {
+        "vr": "PN",
+        "Value": [
+            {
+                "Alphabetic": {
+                    "Family": [
+                        "Wang"
+                    ],
+                    "Given": [
+                        "XiaoDong"
+                    ]
                 },
-                {
-                    "PatientID": {
-                        "Tag": "00100020",
-                        "VR": "LO",
-                        "Value": [
-                            "24680"
-                        ]
-                    },
-                    "IssuerOfPatientID": {
-                        "Tag": "00100021",
-                        "VR": "LO",
-                        "Value": [
-                            "Hospital C"
-                        ]
-                    }
+                "Ideographic": {
+                    "Family": [
+                        "王"
+                    ],
+                    "Given": [
+                        "小東"
+                    ]
                 }
-            ]
-        },
-        "StudyID": {
-            "Tag": "00200010",
-            "VR": "SH",
-            "Value": [
-                "11235821"
-            ]
-        },
-        "StudyInstanceUID": {
-            "Tag": "0020000D",
-            "VR": "UI",
-            "Value": [
-                "1.2.392.200036.9116.2.2.2.2162893313.1029997326.945876"
-            ]
-        },
-        "NumberOfStudyRelatedSeries": {
-            "Tag": "00201206",
-            "VR": "IS",
-            "Value": [
-                "5"
-            ]
-        },
-        "NumberOfStudyRelatedInstances": {
-            "Tag": "00201208",
-            "VR": "IS",
-            "Value": [
-                "1123"
-            ]
-        },
-        "RetrieveURL": {
-            "Tag": "00081190",
-            "VR": "UT",
-            "Value": [
-                "http://wado.nema.org/studies/1.2.392.200036.9116.2.2.2.2162893313.1029997326.945876"
-            ]
-        }
+            }
+        ]
+    },
+    "00100020": {
+        "vr": "LO",
+        "Value": [
+            "12345"
+        ]
+    },
+    "00100021": {
+        "vr": "LO",
+        "Value": [
+            "Hospital A"
+        ]
+    },
+    "00100030": {
+        "vr": "DT",
+        "Value": [
+            "19670701"
+        ]
+    },
+    "00100040": {
+        "vr": "CS",
+        "Value": [
+            "M"
+        ]
+    },
+    "00101002": {
+        "vr": "SQ",
+        "Value": [
+            {
+                "00100020": {
+                    "vr": "LO",
+                    "Value": [
+                        "54321"
+                    ]
+                },
+                "00100021": {
+                    "vr": "LO",
+                    "Value": [
+                        "Hospital B"
+                    ]
+                }
+            },
+            {
+                "00100020": {
+                    "vr": "LO",
+                    "Value": [
+                        "24680"
+                    ]
+                },
+                "00100021": {
+                    "vr": "LO",
+                    "Value": [
+                        "Hospital C"
+                    ]
+                }
+            }
+        ]
+    },
+    "0020000D": {
+        "vr": "UI",
+        "Value": [
+            "1.2.392.200036.9116.2.2.2.1762893313.1029997326.945873"
+        ]
+    },
+    "00200010": {
+        "vr": "SH",
+        "Value": [
+            "11235813"
+        ]
+    },
+    "00201206": {
+        "vr": "IS",
+        "Value": [
+            4
+        ]
+    },
+    "00201208": {
+        "vr": "IS",
+        "Value": [
+            942
+        ]
     }
-]
+}
 		</pre>
 	</div>
 </div>

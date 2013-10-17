@@ -1,43 +1,49 @@
 <div class="container">
 	<div class="row">
-		<h1>DICOM Web Services</h1>
+		<h1>Overview</h1>
 		<p>
-			This website describes in detail the DICOM Web Services, allowing you to unlock healthcare images RESTfully. There are three core services:
+			This website describes in detail the DICOMweb RESTful services, allowing you to unlock the power of healthcare images RESTfully. It is provides access to underlying systems that leverage the medical imaging standard, called DICOM. Knowledge of that standard is important to understand concepts provided in DICOMweb. 
 		</p>
 	</div>
 	<div class="row">
-		<div class="span3 offset1 iconrow">
-			<a href="#qido"><img class="heroicon" src="images/query.png" /><br />
-			Query</a><br />
-			Look for studies, series and instances using QIDO
+		<div class="span6">
+			<h3>Services</h3>
+			<p>
+				The three core services allow you to <a href="#qido">query using QIDO-RS</a>, <a href="#wado">download using WADO-RS</a>, and <a href="#stow">upload via STOW-RS</a>.
+			</p>
+			<h3>Formats</h3>
+			<p>
+				These services can be requested in either <a href="#xml">XML</a> or <a href="#json">JSON</a>. Check out the <a href="#examples">Examples</a> page to see these services in action.
+			</p>
+			<h3>Authentication / Authorization</h3>
+			<p>This is out of scope of the standard - consult your local documentation. Standard HTTP methods should apply.</p>
 		</div>
-		<div class="span3 iconrow">
-			<a href="#wado"><img class="heroicon" src="images/download.png" /><br />
-			Retrieve</a><br />
-			Download specific images by reference with WADO
+		<div class="span2 iconrow">
+			<a href="#qido">
+				<img class="heroicon" src="images/query.png" /><br />
+				Query
+			</a><br />
+			Look for studies, series and instances using QIDO-RS
 		</div>
-		<div class="span3 iconrow">
-			<a href="#stow"><img class="heroicon" src="images/upload.png" /><br />
-			Store</a><br />
-			Store specific instances using STOW
+		<div class="span2 iconrow">
+			<a href="#wado">
+				<img class="heroicon" src="images/download.png" /><br />
+				Retrieve
+			</a><br />
+			Download specific images by reference with WADO-RS
+		</div>
+		<div class="span2 iconrow">
+			<a href="#stow">
+				<img class="heroicon" src="images/upload.png" /><br />
+				Store
+			</a><br />
+			Store specific instances using STOW-RS
 		</div>
 	</div>
-	<br />
 	<div class="row">
-		<p>
-			These services can be requested in either <a href="#xml">XML</a> or <a href="#json">JSON</a>. Check out the <a href="#examples">Examples</a> page to see
-			these services in action.
-		</p>
+		<h3>Notes</h3>
 		<p>Note: this site is meant for reference purposes only - please refer to the specifications for detailed information on the standard.
 		</p>
-		<h2>History</h2>
-		<p>
-			<u>D</u>igital <u>I</u>maging and <u>CO</u>mmunications in <u>M</u>edicine (DICOM) is the imaging standard for healthcare applications, founded in 1983 by
-			the American College of Radiology (ACR) and National Electrical Manufacturers Association (NEMA). It describes both the format and the transport method of 
-			each image and how they are to be grouped (by series, by study, and by patient). For more information about DICOM, visit their <a href="http://medical.nema.org/">website</a>. 
-		</p>
-		<p>
-			Some information on history of web services.
-		</p>
+
 	</div>
 </div>

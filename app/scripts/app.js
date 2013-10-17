@@ -35,6 +35,10 @@ angular.module('dicomdocsApp', [])
         templateUrl: 'views/glossary.html',
         controller: 'GlossaryCtrl'
       })
+      .when('/references', {
+        templateUrl: 'views/references.html',
+        controller: 'ReferencesCtrl'
+      })
       .when('/faq', {
         templateUrl: 'views/faq.html',
         controller: 'FaqCtrl'

@@ -2,13 +2,246 @@
 	<div class="row">
 		<h1>Examples</h1>
 		<p>
-			An oncologist, Karen, is seeing patients in her clinic, and would like background on the patients she is seeing today. Her first patient of the day, Alex. has arrived. She launches her imaging software, and makes a query on Alex using his last name. Her imaging software makes a <b>QIDO query</b> at the study level, to retrieve a list of studies for Alex. She finds the study she would like to view, and launches it. Her imaging software makes a <b>WADO query</b> to download the images for the study. Once downloaded, Karen views the images, and decides to photograph a suspicious lesion. She captures a picture, and uploads it into her imaging software. The imaging software then makes a <b>STOW request</b> to store the image against the imaging repository.
+			An oncologist, Karen Smith, is seeing patients in her clinic, and would like background on the patients she is seeing today. Her first patient of the day, Alex Thompson. has arrived. She launches her imaging software, and makes a query on Alex using his last name. Her imaging software makes a <b>QIDO-RS query</b> at the study level, to retrieve a list of studies for Alex. She finds one result, a CT of the abdomen, and decides she would like to view it. She launches it in her imaging software, which makes a <b>WADO-RS query</b> to download the images for the study. Once downloaded, Karen views the images, and decides to photograph a suspicious lesion. She captures a picture, and uploads it into her imaging software. The imaging software then makes a <b>STOW-RS request</b> to store the image against the imaging repository.
 		</p>
-		<h3>QIDO Query</h3>
-		<p>The Imaging Software constructs a URL as follows:</p>
-		<h3>WADO Query</h3>
-		<p>The Imaging Software constructs a URL as follows:</p>
-		<h3>STOW Query</h3>
-		<p>The Imaging Software constructs a URL as follows:</p>
+		<h3>QIDO-RS Query</h3>
+		<p>Corresponding to "Karen's imaging software makes a <b>QIDO-RS query</b> at the study level, to retrieve a list of studies for Alex", this step demonstrates how the Imaging Software constructs a URL for this query:</p>
+		<pre>
+GET https://dicomweb.myhospital.com/studies/?00100010=THOMPSON&amp;includefield=00081030
+Accept: application/json</pre>
+		<p>Which returns the following JSON response:</p>
+		<pre>
+[
+	{
+	    "00080005": {
+	        "vr": "CS",
+	        "Value": [
+	            "ISO_IR192"
+	        ]
+	    },
+	    "00080020": {
+	        "vr": "DT",
+	        "Value": [
+	            "20130409"
+	        ]
+	    },
+	    "00080030": {
+	        "vr": "TM",
+	        "Value": [
+	            "131600.0000"
+	        ]
+	    },
+	    "00080050": {
+	        "vr": "SH",
+	        "Value": [
+	            "11235813"
+	        ]
+	    },
+	    "00080056": {
+	        "vr": "CS",
+	        "Value": [
+	            "ONLINE"
+	        ]
+	    },
+	    "00080061": {
+	        "vr": "CS",
+	        "Value": [
+	            "CT"
+	        ]
+	    },
+	    "00080130": {
+	        "vr": "LO",
+	        "Value": [
+	            "Abdomen CT"
+	        ]
+	    },
+	    "00080090": {
+	        "vr": "PN",
+	        "Value": [
+	            {
+	                "Alphabetic": {
+	                    "Family": [
+	                        "SMITH"
+	                    ],
+	                    "Given": [
+	                        "KAREN"
+	                    ]
+	                }
+	            }
+	        ]
+	    },
+	    "00100010": {
+	        "vr": "PN",
+	        "Value": [
+	            {
+	                "Alphabetic": {
+	                    "Family": [
+	                        "THOMPSON"
+	                    ],
+	                    "Given": [
+	                        "ALEX"
+	                    ]
+	                }
+	            }
+	        ]
+	    },
+	    "00100020": {
+	        "vr": "LO",
+	        "Value": [
+	            "12345"
+	        ]
+	    },
+	    "00100030": {
+	        "vr": "DT",
+	        "Value": [
+	            "19670701"
+	        ]
+	    },
+	    "00100040": {
+	        "vr": "CS",
+	        "Value": [
+	            "M"
+	        ]
+	    },
+	    "0020000D": {
+	        "vr": "UI",
+	        "Value": [
+	            "1.2.392.200036.9116.2.2.2.1762893313.1029997326.945873"
+	        ]
+	    },
+	    "00200010": {
+	        "vr": "SH",
+	        "Value": [
+	            "11235813"
+	        ]
+	    },
+	    "00201206": {
+	        "vr": "IS",
+	        "Value": [
+	            4
+	        ]
+	    },
+	    "00201208": {
+	        "vr": "IS",
+	        "Value": [
+	            942
+	        ]
+	    }
+	    "00081190": {
+	        "vr": "UT",
+	        "Value": [
+	            "https://dicomweb.myhospital.com/studies/1.2.392.200036.9116.2.2.2.1762893313.1029997326.945873"
+	        ]
+	    }
+	}
+]
+</pre>
+		<h3>WADO-RS Query</h3>
+		<p>Corresponding to "Karen launches it in her imaging software, which makes a <b>WADO-RS query</b> to download the images for the study", this step demonstrates how the Imaging Software constructs a URL for this query: (using the URL passed from the QIDO-RS query):</p>
+		<pre>
+GET https://dicomweb.myhospital.com/studies/1.2.392.200036.9116.2.2.2.1762893313.1029997326.945873
+Accept: multipart/related; type=image/jpeg</pre>
+		<p>Which returns a multipart response of JPEGs representing each image in the study.</p>
+		<h3>STOW-RS Query</h3>
+		<p>Corresponding to "the imaging software then makes a <b>STOW-RS request</b> to store the image against the imaging repository.", this step demonstrates how the Imaging Software constructs a URL for this query.</p>
+		<pre>
+POST https://dicomweb.myhospital.com/studies/2.25.329800735698586629295641978511506172918 
+Content-Type: multipart/related; type=application/dicom+xml; boundary=MESSAGEBOUNDARY
+
+--MESSAGEBOUNDARY
+Content-Type: application/dicom+xml
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;NativeDicomModel&gt;
+	&lt;DicomAttribute Tag="00080020" VR="DT" Keyword="StudyDate"&gt;
+		&lt;Value number="1"&gt;20130409&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00080030" VR="TM" Keyword="StudyTime"&gt;
+		&lt;Value number="1"&gt;131600.0000&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00080050" VR="CS" Keyword="AccessionNumber"&gt;
+		&lt;Value number="1"&gt;98765&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00080056" VR="CS" Keyword="InstanceAvailability"&gt;
+		&lt;Value number="1"ONLINE&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00080061" VR="CS" Keyword="ModalitiesInStudy"&gt;
+		&lt;Value number="1"&gt;XC&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00080090" VR="PN" Keyword="ReferringPhysiciansName"&gt;
+		&lt;PersonName number="1"&gt;
+			&lt;SingleByte&gt;
+				&lt;FamilyName&gt;SMITH&lt;/FamilyName&gt; 
+				&lt;GivenName&gt;KAREN&lt;/GivenName&gt;
+			&lt;/SingleByte&gt;
+		&lt;/PersonName&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00100010" VR="PN" Keyword="PatientName"&gt;
+		&lt;PersonName number="1"&gt;
+			&lt;SingleByte&gt;
+				&lt;FamilyName&gt;THOMPSON&lt;/FamilyName&gt; 
+				&lt;GivenName&gt;ALEX&lt;/GivenName&gt;
+			&lt;/SingleByte&gt;
+		&lt;/PersonName&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00100020" VR="CS" Keyword="PatientID"&gt;
+		&lt;Value number="1"&gt;12345&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00100030" VR="DT" Keyword="PatientsBirthDate"&gt;
+		&lt;Value number="1"&gt;19670701&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00100040" VR="CS" Keyword="PatientsSex"&gt;
+		&lt;Value number="1"&gt;MALE&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00200010" VR="SH" Keyword="StudyID"&gt;
+		&lt;Value number="1"&gt;98765&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="0020000D" VR="UI" Keyword="StudyInstanceUID"&gt;
+		&lt;Value number="1"&gt;2.25.329800735698586629295641978511506172918&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="0020000E" VR="UI" Keyword="SeriesInstanceUID"&gt;
+		&lt;Value number="1"&gt;2.25.444800735698586629295641978511506172918&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00080018" VR="UI" Keyword="SOPInstanceUID"&gt;
+		&lt;Value number="1"&gt;2.25.555800735698586629295641978511506172918&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute tag="00081150" vr="UI" keyword="ReferencedSOPClassUID"&gt;
+		&lt;Value number="1"&gt;1.2.840.10008.1.2.4.50&lt;/Value&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="7FE00010" VR="OB" Keyword="PixelData"&gt;
+		&lt;Value number="1"&gt;329800735&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+&lt;/NativeDicomModel&gt;
+
+--MESSAGEBOUNDARY
+Content-Type: image/jpeg
+Content-Location: 329800735
+
+&lt;binary JPG image data&gt;
+
+--MESSAGEBOUNDARY--</pre>
+		<p>Which returns an XML response reporting on the result of storaging this image:</p>
+		<pre>
+200 OK
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;NativeDicomModel&gt;
+	&lt;DicomAttribute Tag="00081199" VR="SQ" keyword="ReferencedSOPSequence"&gt;
+		&lt;Item number="1"&gt;
+
+			&lt;DicomAttribute tag="00081150" vr="UI" keyword="ReferencedSOPClassUID"&gt;
+				&lt;Value number="1"&gt;1.2.840.10008.1.2.4.50&lt;/Value&gt;
+			&lt;/DicomAttribute&gt;
+			&lt;DicomAttribute tag="00081155" vr="UI" keyword="ReferencedSOPInstanceUID"&gt;
+				&lt;Value number="1"&gt;2.25.555800735698586629295641978511506172918&lt;/Value&gt;
+			&lt;/DicomAttribute&gt;
+			&lt;DicomAttribute tag="00081190" vr="UT" keyword="RetrieveURL"&gt;
+				&lt;Value number="1"&gt;https://dicomweb.myhospital.com/studies/2.25.329800735698586629295641978511506172918/series/2.25.444800735698586629295641978511506172918/instances/2.25.555800735698586629295641978511506172918&lt;/Value&gt;
+			&lt;/DicomAttribute&gt;
+		&lt;/Item&gt;
+	&lt;/DicomAttribute&gt;
+	&lt;DicomAttribute Tag="00081190" VR="UT" Keyword="RetrieveURL"&gt;
+		&lt;Value number="1"&gt;https://dicomweb.myhospital.com/studies/2.25.329800735698586629295641978511506172918&lt;/value&gt;
+	&lt;/DicomAttribute&gt;
+&lt;/NativeDicomModel&gt;</pre>
 	</div>
 </div>
